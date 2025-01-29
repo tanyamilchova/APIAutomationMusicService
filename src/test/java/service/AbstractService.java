@@ -145,11 +145,11 @@ public class AbstractService {
 
     public  boolean isPresentResource(String endpoint, long resourceId, String listPath) {
         if (endpoint == null || endpoint.isBlank()) {
-            logger.error("Invalid endpoint: {}", endpoint);
+            logger.error("IsPresentResource - Invalid endpoint: {}", endpoint);
             throw new IllegalArgumentException("Endpoint cannot be null or blank");
         }
         if (resourceId <= 0) {
-            logger.error("Invalid resourceId: {}", resourceId);
+            logger.error("Invalid resourceId negative or zero : {}", resourceId);
             throw new IllegalArgumentException("Resource ID must be greater than 0");
         }
         try {

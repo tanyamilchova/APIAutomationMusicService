@@ -15,7 +15,7 @@ public class Util {
     private static String ILLEGAL_RESOURSE = "resource.illegalId";
 
 
-    public static String validateProperty(String propertyValue) {
+    public static String validateNullAndEmptyProperty(String propertyValue) {
         if (propertyValue == null || propertyValue.isEmpty()) {
             throw new IllegalArgumentException("The property is null or empty.");
         }
@@ -38,8 +38,10 @@ public class Util {
         return getDataFromProperty(RESOURSE_TO_UPDATE);
     }
 
+
+
     public static long getDataFromProperty(String property){
-        validateProperty(property);
+        validateNullAndEmptyProperty(property);
         String id = (Objects.requireNonNull(
                         TestDataReader.getTestData(property))
                 .trim());

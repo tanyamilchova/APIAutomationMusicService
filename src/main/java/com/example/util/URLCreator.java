@@ -1,6 +1,6 @@
 package com.example.util;
 
-import static com.example.util.Util.validateProperty;
+import static com.example.util.Util.validateNullAndEmptyProperty;
 
 public class URLCreator {
     private static final String USER_GET_UPDATE_DELETE = "user.get_put_delete_by_id";
@@ -54,7 +54,7 @@ public class URLCreator {
 
     public static String playlistGetURL(String url) {
         try {
-            validateProperty(TestDataReader.getTestData(url));
+            validateNullAndEmptyProperty(TestDataReader.getTestData(url));
             return TestDataReader.getTestData(url);
         } catch (RuntimeException e) {
             throw new RuntimeException("Failed to get PLAYLIST_GET_TRACKS from properties: " + e.getMessage(), e);

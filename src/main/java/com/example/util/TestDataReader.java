@@ -14,7 +14,7 @@ public class TestDataReader {
     public static ResourceBundle resourceBundle=ResourceBundle.getBundle(System.getProperty("environment"));
 
     public static String getTestData(String key){
-       Util.validateProperty(key);
+       Util.validateNullAndEmptyProperty(key);
        String envValue = System.getenv(key);
        if (envValue != null && !envValue.trim().isEmpty()) {
            return envValue;

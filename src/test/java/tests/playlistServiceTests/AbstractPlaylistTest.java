@@ -17,8 +17,6 @@ public class AbstractPlaylistTest {
 
     static Logger logger = LoggerFactory.getLogger(AbstractPlaylistTest.class);
     protected long idResource = Util.getResourceIdFromProperty();
-//    protected long trackToRemoveId = Util.getResourceIdFromProperty();
-    protected long trackToDelete = Util.getResourceToDelete();
     protected long track = Util.getResourceIdFromProperty();
     protected String idResourceStr = TestDataReader.getTestData("response.list.path_id");
 
