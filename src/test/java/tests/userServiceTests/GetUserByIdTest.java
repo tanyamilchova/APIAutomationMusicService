@@ -17,8 +17,8 @@ public class GetUserByIdTest {
 
 
         assertEquals(id, user.getId());
-        assertEquals("Samantha", user.getFirstName());
-        assertEquals("Young", user.getLastName());
-        assertEquals("Samantha_Young@gmail.com", user.getEmail());
+        assertEquals("Addison", user.getFirstName());
+        assertEquals("Perez", user.getLastName());
+        assertEquals("Addison_Perez@aol.com", user.getEmail());
     }
 }

@@ -265,7 +265,7 @@ java.lang.RuntimeException: Failed to retrieve data: 404
 2025-01-28 19:07:27 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 32 in the system."}
 2025-01-28 19:07:27 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 32
 2025-01-28 19:07:27 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 32
-com.example.exseption.ResourceNotFoundException: Resource: class com.example.model.Track ID: 32 is not found
+com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 32 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:34)
@@ -347,7 +347,7 @@ com.example.exseption.ResourceNotFoundException: Resource: class com.example.mod
 2025-01-28 19:07:43 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 2 in the system."}
 2025-01-28 19:07:43 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 2
 2025-01-28 19:07:43 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 2
-com.example.exseption.ResourceNotFoundException: Resource: class com.example.model.Track ID: 2 is not found
+com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 2 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.GetTrackById.getTrackByIdTest(GetTrackById.java:16)

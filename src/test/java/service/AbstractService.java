@@ -1,6 +1,6 @@
 package service;
 
-import com.example.exseption.ResourceNotFoundException;
+import com.example.exseption.NotFoundException;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.slf4j.Logger;
@@ -95,7 +95,7 @@ public class AbstractService {
             logger.info("Response received from PUT request: {}", response.asString());
 
             if(checkResourceNotFound(response, endpoint,resourceId)){
-                throw new ResourceNotFoundException("Resource: "+ resource + " ID: " + resourceId +" is not found");
+                throw new NotFoundException("Resource: "+ resource + " ID: " + resourceId +" is not found");
             }
 
             T updatedResource = response.as((Class<T>) resource.getClass());
@@ -130,7 +130,7 @@ public class AbstractService {
             logger.info("Response received from GET request: {}", response.asString());
 
             if(checkResourceNotFound(response, endpoint,resourceId)){
-                throw new ResourceNotFoundException("Resource: "+ resourceClass + " ID: " + resourceId +" is not found");
+                throw new NotFoundException("Resource: "+ resourceClass + " ID: " + resourceId +" is not found");
             }
             return response.as(resourceClass);
         } catch (IllegalArgumentException e) {
