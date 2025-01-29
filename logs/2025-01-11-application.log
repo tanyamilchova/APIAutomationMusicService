@@ -1,0 +1,44 @@
+2025-01-11 17:55:27 [main] INFO  service.AbstractService - Fetching resource with ID: 2 from endpoint: /api/playlists/{id}
+2025-01-11 17:55:28 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 2
+2025-01-11 17:55:28 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/tracks/{id}
+2025-01-11 17:55:28 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-01-11 18:00:40 [main] INFO  service.AbstractService - Fetching resource with ID: 2 from endpoint: /api/playlists/{id}
+2025-01-11 18:00:41 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 2
+2025-01-11 18:00:41 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/tracks/{id}
+2025-01-11 18:00:41 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Sending GET request to endpoint: http://localhost:8080/api/playlists/{id}/tracks
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Response body: [{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"},{"id":13,"title":"Seraphic Serenade of Joy","artist":"Celestial Harmony","duration":312,"year":1984,"album":"Winter's Embrace"},{"id":14,"title":"Melancholic Melodies in Motion","artist":"Dream-catcher","duration":205,"year":1942,"album":"Whispering Melodies"},{"id":21,"title":"Midnight Whispers of Wonder","artist":"Velvet Reverie","duration":266,"year":1998,"album":"Moonlit Reflections"},{"id":24,"title":"Nostalgic Reflections of Joy","artist":"Crystal Visions","duration":170,"year":2020,"album":"Aurora's Awakening"},{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"}]
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Playlist IDs retrieved: [1, 13, 14, 21, 24, 1]
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Size of playlist IDs: 6
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Sending GET request to endpoint: http://localhost:8080/api/playlists/{id}/tracks
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Response body: [{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"},{"id":13,"title":"Seraphic Serenade of Joy","artist":"Celestial Harmony","duration":312,"year":1984,"album":"Winter's Embrace"},{"id":14,"title":"Melancholic Melodies in Motion","artist":"Dream-catcher","duration":205,"year":1942,"album":"Whispering Melodies"},{"id":21,"title":"Midnight Whispers of Wonder","artist":"Velvet Reverie","duration":266,"year":1998,"album":"Moonlit Reflections"},{"id":24,"title":"Nostalgic Reflections of Joy","artist":"Crystal Visions","duration":170,"year":2020,"album":"Aurora's Awakening"},{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"}]
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Playlist IDs retrieved: [1, 13, 14, 21, 24, 1]
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Size of playlist IDs: 6
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Fetching resource with ID: 2 from endpoint: /api/playlists/{id}
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 2
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/tracks/{id}
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Sending GET request to endpoint: http://localhost:8080/api/playlists/{id}/tracks
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Response body: [{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"},{"id":13,"title":"Seraphic Serenade of Joy","artist":"Celestial Harmony","duration":312,"year":1984,"album":"Winter's Embrace"},{"id":14,"title":"Melancholic Melodies in Motion","artist":"Dream-catcher","duration":205,"year":1942,"album":"Whispering Melodies"},{"id":21,"title":"Midnight Whispers of Wonder","artist":"Velvet Reverie","duration":266,"year":1998,"album":"Moonlit Reflections"},{"id":24,"title":"Nostalgic Reflections of Joy","artist":"Crystal Visions","duration":170,"year":2020,"album":"Aurora's Awakening"},{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"},{"id":1,"title":"Shimmering Twilight's Melodies","artist":"Whispering Melodies","duration":343,"year":1991,"album":"Melancholic Melodies"}]
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Playlist IDs retrieved: [1, 13, 14, 21, 24, 1, 1]
+2025-01-11 18:00:42 [main] INFO  service.AbstractService - Size of playlist IDs: 7
+2025-01-11 18:04:12 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 8 and resource: com.example.model.PlayList@44536de4
+2025-01-11 18:04:12 [main] INFO  service.AbstractService - Response received from PUT request: {"id":8,"name":"UpdatedName","description":"UpdatedDescription","isPublic":true,"userId":2,"tracks":[]}
+2025-01-11 18:04:21 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 9 and resource: com.example.model.PlayList@6cff61fc
+2025-01-11 18:04:21 [main] INFO  service.AbstractService - Response received from PUT request: {"id":9,"name":"UpdatedName","description":"UpdatedDescription","isPublic":true,"userId":2,"tracks":[]}
+2025-01-11 18:04:44 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 10 and resource: com.example.model.PlayList@7fe82967
+2025-01-11 18:04:45 [main] INFO  service.AbstractService - Response received from PUT request: {"id":10,"name":"UpdatedName","description":"UpdatedDescription","isPublic":true,"userId":2,"tracks":[]}
+2025-01-11 18:04:53 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 11 and resource: com.example.model.PlayList@50850539
+2025-01-11 18:04:53 [main] INFO  service.AbstractService - Response received from PUT request: {"id":11,"name":"UpdatedName","description":"UpdatedDescription","isPublic":true,"userId":2,"tracks":[]}
+2025-01-11 18:05:48 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 12 and resource: com.example.model.PlayList@65e21ce3
+2025-01-11 18:05:48 [main] INFO  service.AbstractService - Response received from PUT request: {"id":12,"name":"UpdatedName","description":"UpdatedDescription","isPublic":true,"userId":2,"tracks":[]}
+2025-01-11 18:10:15 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with resourceId: 31
+2025-01-11 18:10:15 [main] INFO  service.AbstractService - Response received from GET request: {"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-01-11 18:10:15 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/tracks/{id} with playlistId: 31 and resource: com.example.model.Track@252a8aae
+2025-01-11 18:10:15 [main] INFO  service.AbstractService - Response received from PUT request: {"id":31,"title":"NewTitle","artist":"NewArtist","duration":1,"year":2000,"album":"NewAlbum"}
+2025-01-11 18:13:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with resourceId: 2
+2025-01-11 18:13:23 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"Penelope","lastName":"Ward","email":"Penelope_Ward@mail.com"}
+2025-01-11 18:14:48 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with resourceId: 2
+2025-01-11 18:14:49 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"Penelope","lastName":"Ward","email":"Penelope_Ward@mail.com"}
+2025-01-11 18:15:10 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with resourceId: 2
+2025-01-11 18:15:10 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"Penelope","lastName":"Ward","email":"Penelope_Ward@mail.com"}
