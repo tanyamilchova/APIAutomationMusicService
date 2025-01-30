@@ -12,6 +12,7 @@ public class Util {
     private static String RESOURSE_ID = "resource_id";
     private static String RESOURSE_TO_UPDATE = "resource_to_update";
     private static String RESOURSE_TO_DELETE = "resource_to_remove";
+//    private static String RESOURSE_TO_DELETE_FROM_ALL_PLAYLISTS = "resource_to_remove_from_playlists";
     private static String ILLEGAL_RESOURSE = "resource.illegalId";
 
 

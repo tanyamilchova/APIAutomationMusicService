@@ -17,18 +17,28 @@ import static org.testng.AssertJUnit.*;
 public class DeleteTrackTest {
     TrackService service = new TrackService();
     PlaylistService playlistService = new PlaylistService();
+
+    private long getNewTrackId(TrackService service) {
+        Track track = service.createTrack();
+        return track.getId();
+    }
+
     @Test
     public void deleteTrackDetailsTest(){
-        Track track = service.createTrack();
-        long id = track.getId();
+//        Track track = service.createTrack();
+//        long id = track.getId();
+        long id = getNewTrackId(service);
 
         service.deleteTrackById(id);
         assertFalse(service.checkIfSuccessfullyDeleted(id));
     }
+
+
+
     @Test
     public void deleteNotFoundTrackTest() {
-        Track createdTrack = service.createTrack();
-        long trackIdToDelete = createdTrack.getId();
+//        Track createdTrack = service.createTrack();
+        long trackIdToDelete = getNewTrackId(service);
 
         service.deleteTrackById(trackIdToDelete);
 
@@ -37,8 +47,8 @@ public class DeleteTrackTest {
     @Test
     public void deleteTrackFromAllPlaylistsTest() {
 
-//        long trackIdToDelete = Util.getLongResourceIdFromProperty("track-to-delete_from_playlists");
         long trackIdToDelete = Util.getResourceToDelete();
+
         service.deleteTrackById(trackIdToDelete);
 
         Response response = playlistService.getAllPlaylists();

@@ -17,14 +17,8 @@ public class AbstractService {
     private final Logger logger = LoggerFactory.getLogger(AbstractService.class);
 
     public  ValidatableResponse getValidateResponseResourceById(String endpoint, long resourceId){
-            if (endpoint == null || endpoint.isBlank() ) {
-                logger.error("Invalid endpoint: {}", endpoint);
-                throw new IllegalArgumentException("Endpoint cannot be null or blank");
-            }
-            if (resourceId <= 0) {
-                logger.error("Invalid resource ID: {}", resourceId);
-                throw new IllegalArgumentException("Resource ID must be greater than 0");
-            }
+        checkIsValidEndpoint(endpoint);
+        checkIfZeroOrNegative(resourceId);
             try {
                 logger.info("Fetching resource with ID: {} from endpoint: {}", resourceId, endpoint);
 
@@ -49,12 +43,8 @@ public class AbstractService {
             }
     }
 
-
     public <T> ResourceResponse<T> createResource(T resource, String endpoint) {
-        if(resource == null || endpoint == null || endpoint.isBlank()){
-            logger.error("Illegal value for resource or endpoint. Resource: {}, Endpoint: {}", resource, endpoint);
-            throw new IllegalArgumentException("Illegal value for resource or endpoint");
-        }
+        checkIfValidEndpointAndResource(endpoint, resource);
         try {
             Response response = given()
                     .header("Content-Type", "application/json")
@@ -74,15 +64,11 @@ public class AbstractService {
         }
     }
 
+
+
     public <T> ResourceResponse <T> updateResource(T resource, String endpoint, long resourceId){
-        if (resource == null || endpoint == null || endpoint.isBlank()) {
-            logger.error("Invalid resource or endpoint in Put Request. Resource: {}, Endpoint: {}", resource, endpoint);
-            throw new IllegalArgumentException("Resource or endpoint cannot be null or blank");
-        }
-        if (resourceId <= 0) {
-            logger.error("Invalid playlistId: {}", resourceId);
-            throw new IllegalArgumentException("Playlist ID must be greater than 0");
-        }
+        checkIfValidEndpointAndResource(endpoint, resource);
+        checkIfZeroOrNegative(resourceId);
         try {
             logger.info("Sending PUT request to endpoint: {} with playlistId: {} and resource: {}", endpoint, resourceId, resource);
             Response response = given()
@@ -94,7 +80,7 @@ public class AbstractService {
 
             logger.info("Response received from PUT request: {}", response.asString());
 
-            if(checkResourceNotFound(response, endpoint,resourceId)){
+            if(isNotFoundResource(response, endpoint,resourceId)){
                 throw new NotFoundException("Resource: "+ resource + " ID: " + resourceId +" is not found");
             }
 
@@ -110,15 +96,11 @@ public class AbstractService {
         }
     }
 
+
+
     public <T> T getResourceById(Class<T> resourceClass, String endpoint, long resourceId){
-        if (resourceClass == null || endpoint == null || endpoint.isBlank()) {
-            logger.error("Invalid resourceClass or endpoint. ResourceClass: {}, Endpoint: {}", resourceClass, endpoint);
-            throw new IllegalArgumentException("ResourceClass or endpoint cannot be null or blank");
-        }
-        if (resourceId <= 0) {
-            logger.error("Invalid resourceId: {}", resourceId);
-            throw new IllegalArgumentException("Resource ID must be greater than 0");
-        }
+        checkIfValidEndpointAndResource(endpoint, resourceId);
+        checkIfZeroOrNegative(resourceId);
 
         try {
             logger.info("Sending GET request to endpoint: {} with resourceId: {}", endpoint, resourceId);
@@ -129,7 +111,7 @@ public class AbstractService {
 
             logger.info("Response received from GET request: {}", response.asString());
 
-            if(checkResourceNotFound(response, endpoint,resourceId)){
+            if(isNotFoundResource(response, endpoint,resourceId)){
                 throw new NotFoundException("Resource: "+ resourceClass + " ID: " + resourceId +" is not found");
             }
             return response.as(resourceClass);
@@ -144,21 +126,14 @@ public class AbstractService {
 
 
     public  boolean isPresentResource(String endpoint, long resourceId, String listPath) {
-        if (endpoint == null || endpoint.isBlank()) {
-            logger.error("IsPresentResource - Invalid endpoint: {}", endpoint);
-            throw new IllegalArgumentException("Endpoint cannot be null or blank");
-        }
-        if (resourceId <= 0) {
-            logger.error("Invalid resourceId negative or zero : {}", resourceId);
-            throw new IllegalArgumentException("Resource ID must be greater than 0");
-        }
+        checkIsValidEndpoint(endpoint);
+        checkIfZeroOrNegative(resourceId);
         try {
             logger.info("Sending GET request to endpoint: {} to check if resource with ID: {} exists", endpoint, resourceId);
             Response response = given()
                     .header("Content-Type", "application/json")
                     .when()
                     .get(endpoint);
-//            if (response.statusCode() != 200) {
             if (errorResponse(response)) {
                 logger.error("Failed to retrieve data. HTTP Status Code: {}", response.statusCode());
                 throw new RuntimeException("Failed to retrieve data: " + response.statusCode());
@@ -188,10 +163,7 @@ public class AbstractService {
 
 
     public  long getNumberOfResources(long id, long trackId, String endpoint, String listData) {
-        if (endpoint == null || endpoint.isBlank()) {
-            logger.error("Invalid endpoint: {}", endpoint);
-            throw new IllegalArgumentException("Endpoint cannot be null or blank");
-        }
+        checkIsValidEndpoint(endpoint);
         try {
             logger.info("Sending GET request to endpoint: {}", endpoint);
             Response response = given()
@@ -199,9 +171,7 @@ public class AbstractService {
                     .header("Content-Type", "application/json")
                     .when()
                     .get(endpoint);
-
-            if (response.statusCode() != 200) {
-//            if (errorResponse(response)) {
+            if (errorResponse(response)) {
                 logger.error("Failed to retrieve data - GET request. HTTP Status Code: {}", response.statusCode());
                 throw new RuntimeException("Failed to retrieve data: " + response.statusCode());
             }
@@ -209,17 +179,7 @@ public class AbstractService {
             List<Integer> playlistIds = response.jsonPath().getList(listData);
             logger.info("Playlist IDs retrieved: {}", playlistIds);
 
-            Map<Long, Long> tracksMap = new HashMap<>();
-            if (!playlistIds.isEmpty()) {
-                for (long trId : playlistIds) {
-                    if (!tracksMap.containsKey(trId)) {
-                        tracksMap.put(trId, 1L);
-                    } else {
-                        long numIds = tracksMap.get(trId) + 1;
-                        tracksMap.put(trId, numIds);
-                    }
-                }
-            }
+            Map<Long, Long> tracksMap = putTracksIdsIntoMap(playlistIds);
 
             logger.info("Size of playlist IDs: {}", playlistIds.size());
             if (tracksMap.containsKey(trackId)) {
@@ -237,12 +197,24 @@ public class AbstractService {
         }
     }
 
-    public <T> T deleteResourceById(Class<T> resourceClass, String endpoint, long resourceId){
 
-        if (endpoint == null || endpoint.isBlank()) {
-            logger.error("Invalid endpoint: {}", endpoint);
-            throw new IllegalArgumentException("Endpoint cannot be null or blank");
+    private Map<Long, Long> putTracksIdsIntoMap(List<Integer> playlistIds) {
+        Map<Long, Long> tracksMap = new HashMap<>();
+        if (!playlistIds.isEmpty()) {
+            for (long trId : playlistIds) {
+                if (!tracksMap.containsKey(trId)) {
+                    tracksMap.put(trId, 1L);
+                } else {
+                    long numIds = tracksMap.get(trId) + 1;
+                    tracksMap.put(trId, numIds);
+                }
+            }
         }
+        return tracksMap;
+    }
+
+    public <T> T deleteResourceById(Class<T> resourceClass, String endpoint, long resourceId){
+        checkIsValidEndpoint(endpoint);
         try {
             logger.info("Sending DELETE request to endpoint: {} for resourceId: {}", endpoint, resourceId);
             Response response = given()
@@ -251,14 +223,13 @@ public class AbstractService {
                     .delete(endpoint);
             logger.info("Received response with status code: {}", response.statusCode());
 
-//            if (response.statusCode() != 200) {
             if (errorResponse(response)) {
                 logger.error("Failed to delete resource. HTTP Status Code: {}", response.statusCode());
                 throw new RuntimeException("Failed to delete resource: " + resourceId + " ,statusCode: " + response.statusCode());
             }
             logger.info("Response body: {}", response.asString());
 
-            if(checkResourceNotFound(response, endpoint, resourceId)) {
+            if(isNotFoundResource(response, endpoint, resourceId)) {
                 return response.as(resourceClass);
             }
         } catch (IllegalArgumentException e) {
@@ -271,7 +242,8 @@ public class AbstractService {
         return null;
     }
 
-    private boolean checkResourceNotFound(Response response, String endpoint, long resourceId) {
+
+    private boolean isNotFoundResource(Response response, String endpoint, long resourceId) {
         if (response.getStatusCode() == 404) {
             logger.error("Resource not found at endpoint: {} with resourceId: {}", endpoint, resourceId);
             return true;
@@ -280,6 +252,28 @@ public class AbstractService {
     }
 
     private boolean errorResponse(Response response){
-        return response.statusCode() < 200 || response.statusCode() > 209;
+        return response.statusCode() < 200 || response.statusCode() > 299;
+    }
+
+    private void checkIfZeroOrNegative(long resourceId) {
+        if (resourceId <= 0) {
+            logger.error("Invalid playlistId: {}", resourceId);
+            throw new IllegalArgumentException("Playlist ID must be greater than 0");
+        }
+    }
+
+    private <T> void checkIfValidEndpointAndResource(String endpoint, T resource) {
+        if(resource == null || endpoint == null || endpoint.isBlank()){
+            logger.error("Illegal value for resource or endpoint. Resource: {}, Endpoint: {}", resource, endpoint);
+            throw new IllegalArgumentException("Illegal value for resource or endpoint");
+        }
+    }
+
+    private boolean checkIsValidEndpoint(String endpoint) {
+        if (endpoint == null || endpoint.isBlank() ) {
+            logger.error("Invalid endpoint: {}", endpoint);
+            throw new IllegalArgumentException("Endpoint cannot be null or blank");
+        }
+        return true;
     }
 }
