@@ -353,7 +353,7 @@ java.lang.RuntimeException: Failed to delete resource: 30 ,statusCode: 404
 2025-01-12 14:47:20 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 40 in the system."}
 2025-01-12 14:47:20 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 40
 2025-01-12 14:47:20 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 40
-com.example.exseption.NotFoundException: Resource with ID 40 not found
+com.example.exseption.ResourceException: Resource with ID 40 not found
 	at service.AbstractService.getResourceById(AbstractService.java:153)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteAndCheckTrackTest$0(DeleteTrackTest.java:30)
@@ -438,7 +438,7 @@ com.example.exseption.NotFoundException: Resource with ID 40 not found
 2025-01-12 14:48:23 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 41 in the system."}
 2025-01-12 14:48:23 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 41
 2025-01-12 14:48:23 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 41
-com.example.exseption.NotFoundException: Resource with ID 41 not found
+com.example.exseption.ResourceException: Resource with ID 41 not found
 	at service.AbstractService.getResourceById(AbstractService.java:153)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteAndCheckTrackTest$0(DeleteTrackTest.java:30)
@@ -527,7 +527,7 @@ com.example.exseption.NotFoundException: Resource with ID 41 not found
 2025-01-12 15:04:14 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 31 in the system."}
 2025-01-12 15:04:14 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 31
 2025-01-12 15:04:14 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 31
-com.example.exseption.NotFoundException: Resource with ID 31 not found
+com.example.exseption.ResourceException: Resource with ID 31 not found
 	at service.AbstractService.getResourceById(AbstractService.java:153)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundTrackTest$0(DeleteUserTest.java:29)
@@ -1093,7 +1093,7 @@ java.lang.RuntimeException: Failed to delete resource: 0 ,statusCode: 404
 2025-01-12 15:32:04 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 6 in the system."}
 2025-01-12 15:32:04 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 6
 2025-01-12 15:32:04 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 6
-com.example.exseption.NotFoundException: Resource with ID 6 not found
+com.example.exseption.ResourceException: Resource with ID 6 not found
 	at service.AbstractService.getResourceById(AbstractService.java:153)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:35)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:28)
@@ -1400,7 +1400,7 @@ java.lang.ClassCastException: class io.restassured.internal.ValidatableResponseI
 2025-01-12 16:16:49 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 8 in the system."}
 2025-01-12 16:16:49 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 8
 2025-01-12 16:16:49 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 8
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 8 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 8 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:135)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:35)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:28)
@@ -1497,7 +1497,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.PlayL
 2025-01-12 16:17:49 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists to check if resource with ID: 1 exists
 2025-01-12 16:17:49 [main] INFO  service.AbstractService - Playlist IDs count: 7
 2025-01-12 16:17:49 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 1
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:103)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1589,7 +1589,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 16:19:46 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists to check if resource with ID: 2 exists
 2025-01-12 16:19:46 [main] INFO  service.AbstractService - Playlist IDs count: 7
 2025-01-12 16:19:46 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:103)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1681,7 +1681,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 16:27:42 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists to check if resource with ID: 2 exists
 2025-01-12 16:27:42 [main] INFO  service.AbstractService - Playlist IDs count: 7
 2025-01-12 16:27:42 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:103)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1773,7 +1773,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 16:29:17 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists to check if resource with ID: 2 exists
 2025-01-12 16:29:17 [main] INFO  service.AbstractService - Playlist IDs count: 7
 2025-01-12 16:29:17 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:103)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1865,7 +1865,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 16:36:01 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists to check if resource with ID: 2 exists
 2025-01-12 16:36:01 [main] INFO  service.AbstractService - Playlist IDs count: 7
 2025-01-12 16:36:01 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:103)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1957,7 +1957,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 16:53:32 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists to check if resource with ID: 2 exists
 2025-01-12 16:54:03 [main] INFO  service.AbstractService - Playlist IDs count: 7
 2025-01-12 17:00:30 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:103)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2251,7 +2251,7 @@ java.lang.IllegalArgumentException: path cannot be null
 2025-01-12 17:10:07 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:10:07 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:10:07 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2346,7 +2346,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:15:58 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:15:58 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:15:58 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2441,7 +2441,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:18:12 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:18:12 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:18:12 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2536,7 +2536,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:19:26 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:19:26 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:19:26 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2636,7 +2636,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:25:42 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:25:42 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:26:07 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2736,7 +2736,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:31:52 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:31:59 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:32:37 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2836,7 +2836,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:33:58 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:33:58 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:33:58 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2936,7 +2936,7 @@ com.example.exseption.NotFoundException: Resource is not present
 2025-01-12 17:38:47 [main] INFO  service.AbstractService - Size of playlist IDs: 0
 2025-01-12 17:44:59 [main] WARN  service.AbstractService - No resource IDs found in the response.
 2025-01-12 17:44:59 [main] ERROR service.PlaylistService - An error occurred while deleting a resource is present at endpoint: /api/playlists with resourceId: 2
-com.example.exseption.NotFoundException: Resource is not present
+com.example.exseption.ResourceException: Resource is not present
 	at service.PlaylistService.removeTracksFromPlaylist(PlaylistService.java:106)
 	at tests.playlistServiceTests.DeleteTrackFromPlaylist.deleteTracksFromPlaylistTest(DeleteTrackFromPlaylist.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

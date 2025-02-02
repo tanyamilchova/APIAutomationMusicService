@@ -1,7 +1,6 @@
 package tests.userServiceTests;
 
 import com.example.model.User;
-import com.example.util.Util;
 import org.junit.jupiter.api.Test;
 import service.UserService;
 

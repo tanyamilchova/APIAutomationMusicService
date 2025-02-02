@@ -23,7 +23,7 @@ public class AbstractPlaylistTest {
     protected  PlayList getCreatedPlaylist(){
         PlaylistService service = new PlaylistService();
         long userid = Util.getResourceIdFromProperty();
-        logger.info("Playlist creation for user: " + userid);
+        logger.info("Playlist creation for user: {}", userid);
         return service.createPlaylist(userid);
     }
 

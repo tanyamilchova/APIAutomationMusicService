@@ -26,7 +26,7 @@ public class DeleteTrackFromPlaylist extends AbstractPlaylistTest {
         assertEquals(200, response.getStatusCode());
         assertEquals(numOfTrack, service.getNumberOfResource(idResource, trackId, idResourceStr));
 
-        service.removeTracksFromPlaylist(idResource, trackId);
+        service.deleteTracksFromPlaylist(idResource, trackId);
 
         numOfTrack -= 1;
         assertEquals(numOfTrack, service.getNumberOfResource(idResource, trackId, idResourceStr));

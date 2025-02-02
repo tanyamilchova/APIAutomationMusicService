@@ -17,5 +17,4 @@ public class Track {
     private int year;
     private String album;
 
-
 }

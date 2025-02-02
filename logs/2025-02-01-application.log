@@ -1,0 +1,1216 @@
+2025-02-01 13:20:55 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 13:20:55 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@5afa3c9
+2025-02-01 13:20:57 [main] ERROR service.AbstractService - Failed to make request to Endpoint: /api/playlists Resource: com.example.model.PlayList@5afa3c9
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.PlaylistService.createPlaylist(PlaylistService.java:56)
+	at tests.playlistServiceTests.AbstractPlaylistTest.getCreatedPlaylist(AbstractPlaylistTest.java:27)
+	at tests.playlistServiceTests.CreateAPlayListTest.<init>(CreateAPlayListTest.java:12)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.junit.platform.commons.util.ReflectionUtils.newInstance(ReflectionUtils.java:552)
+	at org.junit.jupiter.engine.execution.ConstructorInvocation.proceed(ConstructorInvocation.java:56)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestClassConstructor(InvocationInterceptor.java:73)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:62)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:310)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:286)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 13:25:09 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:25:10 [main] INFO  service.AbstractService - Response received from POST request: {"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:25:10 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks to check if resource with ID: 31 exists
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - resourceListIds IDs count: 31
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 31 and resource: null
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks to check if resource with ID: 31 exists
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+2025-02-01 13:25:11 [main] INFO  service.AbstractService - resourceListIds IDs count: 30
+2025-02-01 13:25:37 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - Response received from POST request: {"id":32,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks to check if resource with ID: 32 exists
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32]
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - resourceListIds IDs count: 31
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 32 and resource: null
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":32,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:25:39 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 32 and resource: null
+2025-02-01 13:25:40 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 32 in the system."}
+2025-02-01 13:25:40 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 32
+2025-02-01 13:25:40 [main] ERROR service.PlaylistService - An error occurred while getting  a track with Id : 32 at endpoint: /api/tracks 
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 32 is not found
+	at service.AbstractService.getResourceById(AbstractService.java:158)
+	at service.TrackService.getTrackById(TrackService.java:24)
+	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:41)
+	at org.testng.Assert.expectThrows(Assert.java:2444)
+	at org.testng.Assert.expectThrows(Assert.java:2425)
+	at org.testng.Assert.assertThrows(Assert.java:2391)
+	at tests.trackServiceTests.DeleteTrackTest.deleteNotFoundTrackTest(DeleteTrackTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 13:25:50 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with playlistId: 0 and resource: null
+2025-02-01 13:25:51 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"},{"id":2,"title":"Sweet Melodies of Euphoria","artist":"Harmonic Dreams","duration":221,"year":2005,"album":"Aurora's Awakening"},{"id":3,"title":"Celestial Melodies in Motion","artist":"Whiskey Lullaby","duration":326,"year":1953,"album":"Echoes of Eternity"},{"id":4,"title":"Melancholic Melodies in Motion","artist":"Electric Serenade","duration":404,"year":2004,"album":"Winter's Embrace"},{"id":5,"title":"Luminous Serenade of Reflection","artist":"Mystic Pulse","duration":195,"year":1995,"album":"Velvet Harmony"},{"id":6,"title":"Ocean's Embrace in Moonlight","artist":"Whispering Melodies","duration":229,"year":1968,"album":"Ethereal Dreams"},{"id":7,"title":"Gossamer Melodies of Wonder","artist":"Silver Lining","duration":361,"year":2010,"album":"Summer Breeze Melodies"},{"id":8,"title":"Lullaby for the Soul's Solitude","artist":"Tranquil Echoes","duration":187,"year":1941,"album":"Blissful Whispers"},{"id":9,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":190,"year":2022,"album":"Aurora's Awakening"},{"id":10,"title":"Quicksilver Melodies of Bliss","artist":"Dreamweaver","duration":313,"year":2002,"album":"Moonlit Reflections"},{"id":11,"title":"Sylphlike Melodies in Motion","artist":"Midnight Serenade","duration":353,"year":1943,"album":"Radiant Reverie"},{"id":12,"title":"Enchanted Horizon of Melodies","artist":"Enigmatic Melodies","duration":339,"year":1942,"album":"Winter's Embrace"},{"id":13,"title":"Moonbeam Melodies of Harmony","artist":"Celestial Harmony","duration":246,"year":1997,"album":"Melancholic Melodies"},{"id":14,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":199,"year":1956,"album":"Paradise Melodies"},{"id":15,"title":"Harmonious Journey of Melodies","artist":"Serendipity Soundscapes","duration":235,"year":1961,"album":"Harmonic Horizons"},{"id":16,"title":"Shimmering Twilight's Melodies","artist":"Radiant Harmony","duration":385,"year":2018,"album":"Blissful Whispers"},{"id":17,"title":"Whispers of Hope in Moonlight","artist":"Harmonic Dreams","duration":142,"year":1949,"album":"Tranquil Tunes"},{"id":18,"title":"Whispers of Tranquil Harmony","artist":"Electric Aura","duration":154,"year":1982,"album":"Serenade of Serenity"},{"id":19,"title":"Melodies in Motion's Solitude","artist":"Celestial Harmonies","duration":223,"year":2012,"album":"Symphony of Dreams"},{"id":20,"title":"Tranquil Echoes of Wonder","artist":"Radiant Soul","duration":275,"year":2001,"album":"Moonlit Reflections"},{"id":21,"title":"Enchanted Horizon of Melodies","artist":"Soulful Reverie","duration":420,"year":1967,"album":"Sweet Serendipity"},{"id":22,"title":"Enchanted Forest's Whispers of Serenade","artist":"Enigmatic Melodies","duration":228,"year":1976,"album":"Harmonic Horizons"},{"id":23,"title":"Velvet Serenade of Bliss","artist":"Serendipity Soundscape","duration":209,"year":1961,"album":"Infinite Symphony"},{"id":24,"title":"Melancholic Melodies in Motion","artist":"Soulful Reverie","duration":181,"year":1957,"album":"Silver Lining Songs"},{"id":25,"title":"Summer Breeze's Serenade","artist":"Stellar Pulse","duration":295,"year":2005,"album":"Ethereal Dreams"},{"id":26,"title":"Velvet Serenade of Bliss","artist":"Tranquil Echoes","duration":256,"year":1980,"album":"Golden Memories"},{"id":27,"title":"Seraphic Serenade of Joy","artist":"Electric Serenade","duration":244,"year":1972,"album":"Paradise Melodies"},{"id":28,"title":"Whispers of Hope in Moonlight","artist":"Sonic Renegades","duration":294,"year":1992,"album":"Serenade of Serenity"},{"id":29,"title":"Melodies from the Heart's Solitude","artist":"Astral Pulse","duration":216,"year":1958,"album":"Celestial Serenade"},{"id":30,"title":"Velvet Serenade of Bliss","artist":"Serenity's Echo","duration":323,"year":1976,"album":"Celestial Serenade"}]}
+2025-02-01 13:25:52 [main] INFO  service.AbstractService - All Resources List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30] 
+2025-02-01 13:25:52 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks to check if resource with ID: 3 exists
+2025-02-01 13:25:52 [main] INFO  service.AbstractService - List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+2025-02-01 13:25:52 [main] INFO  service.AbstractService - resourceListIds IDs count: 30
+2025-02-01 13:25:52 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 3 and resource: null
+2025-02-01 13:25:52 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":3,"title":"Celestial Melodies in Motion","artist":"Whiskey Lullaby","duration":326,"year":1953,"album":"Echoes of Eternity"}
+2025-02-01 13:25:52 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-01 13:36:00 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":33,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Fetched resource IDs count: 30
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 33 and resource: null
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":33,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks
+2025-02-01 13:36:01 [main] INFO  service.AbstractService - Fetched resource IDs count: 29
+2025-02-01 13:36:50 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:36:51 [main] INFO  service.AbstractService - Response received from POST request: {"id":34,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:36:51 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks
+2025-02-01 13:36:52 [main] INFO  service.AbstractService - Fetched resource IDs count: 30
+2025-02-01 13:36:52 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 34 and resource: null
+2025-02-01 13:36:52 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":34,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:36:52 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks
+2025-02-01 13:36:52 [main] INFO  service.AbstractService - Fetched resource IDs count: 29
+2025-02-01 13:50:24 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with playlistId: -1 and resource: com.example.model.User@3f191845
+2025-02-01 13:50:25 [main] INFO  service.AbstractService - Response received from POST request: {"id":31,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 13:50:25 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with playlistId: 31 and resource: null
+2025-02-01 13:50:25 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":31,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 13:50:25 [main] INFO  service.AbstractService - Checking if resource with ID: 31 exists at /api/users/31
+2025-02-01 13:50:25 [main] WARN  service.AbstractService - Resource with ID 31 not found (HTTP Status: 404).
+2025-02-01 13:51:07 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@3ba987b8
+2025-02-01 13:51:08 [main] INFO  service.AbstractService - Response received from POST request: {"id":35,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:51:08 [main] INFO  service.AbstractService - Checking if resource with ID: 35 exists at /api/tracks/35
+2025-02-01 13:51:08 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 35 and resource: null
+2025-02-01 13:51:08 [main] INFO  service.AbstractService - Response received from GET request: {"id":35,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:51:08 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/tracks/{id} with playlistId: 35 and resource: com.example.model.Track@3a082ff4
+2025-02-01 13:51:08 [main] INFO  service.AbstractService - Response received from PUT request: {"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}
+2025-02-01 13:51:36 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:51:37 [main] INFO  service.AbstractService - Response received from POST request: {"id":36,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:51:37 [main] INFO  service.AbstractService - Checking if resource with ID: 36 exists at /api/tracks/36
+2025-02-01 13:51:37 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 36 and resource: null
+2025-02-01 13:51:37 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":36,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:51:37 [main] INFO  service.AbstractService - Checking if resource with ID: 36 exists at /api/tracks/36
+2025-02-01 13:51:37 [main] WARN  service.AbstractService - Resource with ID 36 not found (HTTP Status: 404).
+2025-02-01 13:51:42 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:51:43 [main] INFO  service.AbstractService - Response received from POST request: {"id":37,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:51:43 [main] INFO  service.AbstractService - Checking if resource with ID: 37 exists at /api/tracks/37
+2025-02-01 13:51:43 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 37 and resource: null
+2025-02-01 13:51:43 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":37,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:51:43 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 37 and resource: null
+2025-02-01 13:51:43 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 37 in the system."}
+2025-02-01 13:51:43 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 37
+2025-02-01 13:51:43 [main] ERROR service.PlaylistService - An error occurred while getting  a track with Id : 37 at endpoint: /api/tracks 
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 37 is not found
+	at service.AbstractService.getResourceById(AbstractService.java:159)
+	at service.TrackService.getTrackById(TrackService.java:24)
+	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:41)
+	at org.testng.Assert.expectThrows(Assert.java:2444)
+	at org.testng.Assert.expectThrows(Assert.java:2425)
+	at org.testng.Assert.assertThrows(Assert.java:2391)
+	at tests.trackServiceTests.DeleteTrackTest.deleteNotFoundTrackTest(DeleteTrackTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 13:51:47 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with playlistId: 0 and resource: null
+2025-02-01 13:51:48 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"},{"id":2,"title":"Sweet Melodies of Euphoria","artist":"Harmonic Dreams","duration":221,"year":2005,"album":"Aurora's Awakening"},{"id":4,"title":"Melancholic Melodies in Motion","artist":"Electric Serenade","duration":404,"year":2004,"album":"Winter's Embrace"},{"id":5,"title":"Luminous Serenade of Reflection","artist":"Mystic Pulse","duration":195,"year":1995,"album":"Velvet Harmony"},{"id":6,"title":"Ocean's Embrace in Moonlight","artist":"Whispering Melodies","duration":229,"year":1968,"album":"Ethereal Dreams"},{"id":7,"title":"Gossamer Melodies of Wonder","artist":"Silver Lining","duration":361,"year":2010,"album":"Summer Breeze Melodies"},{"id":8,"title":"Lullaby for the Soul's Solitude","artist":"Tranquil Echoes","duration":187,"year":1941,"album":"Blissful Whispers"},{"id":9,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":190,"year":2022,"album":"Aurora's Awakening"},{"id":10,"title":"Quicksilver Melodies of Bliss","artist":"Dreamweaver","duration":313,"year":2002,"album":"Moonlit Reflections"},{"id":11,"title":"Sylphlike Melodies in Motion","artist":"Midnight Serenade","duration":353,"year":1943,"album":"Radiant Reverie"},{"id":12,"title":"Enchanted Horizon of Melodies","artist":"Enigmatic Melodies","duration":339,"year":1942,"album":"Winter's Embrace"},{"id":13,"title":"Moonbeam Melodies of Harmony","artist":"Celestial Harmony","duration":246,"year":1997,"album":"Melancholic Melodies"},{"id":14,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":199,"year":1956,"album":"Paradise Melodies"},{"id":15,"title":"Harmonious Journey of Melodies","artist":"Serendipity Soundscapes","duration":235,"year":1961,"album":"Harmonic Horizons"},{"id":16,"title":"Shimmering Twilight's Melodies","artist":"Radiant Harmony","duration":385,"year":2018,"album":"Blissful Whispers"},{"id":17,"title":"Whispers of Hope in Moonlight","artist":"Harmonic Dreams","duration":142,"year":1949,"album":"Tranquil Tunes"},{"id":18,"title":"Whispers of Tranquil Harmony","artist":"Electric Aura","duration":154,"year":1982,"album":"Serenade of Serenity"},{"id":19,"title":"Melodies in Motion's Solitude","artist":"Celestial Harmonies","duration":223,"year":2012,"album":"Symphony of Dreams"},{"id":20,"title":"Tranquil Echoes of Wonder","artist":"Radiant Soul","duration":275,"year":2001,"album":"Moonlit Reflections"},{"id":21,"title":"Enchanted Horizon of Melodies","artist":"Soulful Reverie","duration":420,"year":1967,"album":"Sweet Serendipity"},{"id":22,"title":"Enchanted Forest's Whispers of Serenade","artist":"Enigmatic Melodies","duration":228,"year":1976,"album":"Harmonic Horizons"},{"id":23,"title":"Velvet Serenade of Bliss","artist":"Serendipity Soundscape","duration":209,"year":1961,"album":"Infinite Symphony"},{"id":24,"title":"Melancholic Melodies in Motion","artist":"Soulful Reverie","duration":181,"year":1957,"album":"Silver Lining Songs"},{"id":25,"title":"Summer Breeze's Serenade","artist":"Stellar Pulse","duration":295,"year":2005,"album":"Ethereal Dreams"},{"id":26,"title":"Velvet Serenade of Bliss","artist":"Tranquil Echoes","duration":256,"year":1980,"album":"Golden Memories"},{"id":27,"title":"Seraphic Serenade of Joy","artist":"Electric Serenade","duration":244,"year":1972,"album":"Paradise Melodies"},{"id":28,"title":"Whispers of Hope in Moonlight","artist":"Sonic Renegades","duration":294,"year":1992,"album":"Serenade of Serenity"},{"id":29,"title":"Melodies from the Heart's Solitude","artist":"Astral Pulse","duration":216,"year":1958,"album":"Celestial Serenade"},{"id":30,"title":"Velvet Serenade of Bliss","artist":"Serenity's Echo","duration":323,"year":1976,"album":"Celestial Serenade"},{"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}]}
+2025-02-01 13:51:48 [main] INFO  service.AbstractService - All Resources List: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 35] 
+2025-02-01 13:51:48 [main] INFO  service.AbstractService - Checking if resource with ID: 4 exists at /api/tracks/4
+2025-02-01 13:51:48 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 4 and resource: null
+2025-02-01 13:51:48 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":4,"title":"Melancholic Melodies in Motion","artist":"Electric Serenade","duration":404,"year":2004,"album":"Winter's Embrace"}
+2025-02-01 13:51:48 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-01 13:52:21 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@606e4010
+2025-02-01 13:52:21 [main] INFO  service.AbstractService - Response received from POST request: {"id":38,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:52:21 [main] INFO  service.AbstractService - Checking if resource with ID: 38 exists at /api/tracks/38
+2025-02-01 13:52:21 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 38 and resource: null
+2025-02-01 13:52:22 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":38,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:52:22 [main] INFO  service.AbstractService - Checking if resource with ID: 38 exists at /api/tracks/38
+2025-02-01 13:52:22 [main] WARN  service.AbstractService - Resource with ID 38 not found (HTTP Status: 404).
+2025-02-01 13:52:49 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with playlistId: 0 and resource: null
+2025-02-01 13:52:50 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"},{"id":2,"title":"Sweet Melodies of Euphoria","artist":"Harmonic Dreams","duration":221,"year":2005,"album":"Aurora's Awakening"},{"id":5,"title":"Luminous Serenade of Reflection","artist":"Mystic Pulse","duration":195,"year":1995,"album":"Velvet Harmony"},{"id":6,"title":"Ocean's Embrace in Moonlight","artist":"Whispering Melodies","duration":229,"year":1968,"album":"Ethereal Dreams"},{"id":7,"title":"Gossamer Melodies of Wonder","artist":"Silver Lining","duration":361,"year":2010,"album":"Summer Breeze Melodies"},{"id":8,"title":"Lullaby for the Soul's Solitude","artist":"Tranquil Echoes","duration":187,"year":1941,"album":"Blissful Whispers"},{"id":9,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":190,"year":2022,"album":"Aurora's Awakening"},{"id":10,"title":"Quicksilver Melodies of Bliss","artist":"Dreamweaver","duration":313,"year":2002,"album":"Moonlit Reflections"},{"id":11,"title":"Sylphlike Melodies in Motion","artist":"Midnight Serenade","duration":353,"year":1943,"album":"Radiant Reverie"},{"id":12,"title":"Enchanted Horizon of Melodies","artist":"Enigmatic Melodies","duration":339,"year":1942,"album":"Winter's Embrace"},{"id":13,"title":"Moonbeam Melodies of Harmony","artist":"Celestial Harmony","duration":246,"year":1997,"album":"Melancholic Melodies"},{"id":14,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":199,"year":1956,"album":"Paradise Melodies"},{"id":15,"title":"Harmonious Journey of Melodies","artist":"Serendipity Soundscapes","duration":235,"year":1961,"album":"Harmonic Horizons"},{"id":16,"title":"Shimmering Twilight's Melodies","artist":"Radiant Harmony","duration":385,"year":2018,"album":"Blissful Whispers"},{"id":17,"title":"Whispers of Hope in Moonlight","artist":"Harmonic Dreams","duration":142,"year":1949,"album":"Tranquil Tunes"},{"id":18,"title":"Whispers of Tranquil Harmony","artist":"Electric Aura","duration":154,"year":1982,"album":"Serenade of Serenity"},{"id":19,"title":"Melodies in Motion's Solitude","artist":"Celestial Harmonies","duration":223,"year":2012,"album":"Symphony of Dreams"},{"id":20,"title":"Tranquil Echoes of Wonder","artist":"Radiant Soul","duration":275,"year":2001,"album":"Moonlit Reflections"},{"id":21,"title":"Enchanted Horizon of Melodies","artist":"Soulful Reverie","duration":420,"year":1967,"album":"Sweet Serendipity"},{"id":22,"title":"Enchanted Forest's Whispers of Serenade","artist":"Enigmatic Melodies","duration":228,"year":1976,"album":"Harmonic Horizons"},{"id":23,"title":"Velvet Serenade of Bliss","artist":"Serendipity Soundscape","duration":209,"year":1961,"album":"Infinite Symphony"},{"id":24,"title":"Melancholic Melodies in Motion","artist":"Soulful Reverie","duration":181,"year":1957,"album":"Silver Lining Songs"},{"id":25,"title":"Summer Breeze's Serenade","artist":"Stellar Pulse","duration":295,"year":2005,"album":"Ethereal Dreams"},{"id":26,"title":"Velvet Serenade of Bliss","artist":"Tranquil Echoes","duration":256,"year":1980,"album":"Golden Memories"},{"id":27,"title":"Seraphic Serenade of Joy","artist":"Electric Serenade","duration":244,"year":1972,"album":"Paradise Melodies"},{"id":28,"title":"Whispers of Hope in Moonlight","artist":"Sonic Renegades","duration":294,"year":1992,"album":"Serenade of Serenity"},{"id":29,"title":"Melodies from the Heart's Solitude","artist":"Astral Pulse","duration":216,"year":1958,"album":"Celestial Serenade"},{"id":30,"title":"Velvet Serenade of Bliss","artist":"Serenity's Echo","duration":323,"year":1976,"album":"Celestial Serenade"},{"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}]}
+2025-02-01 13:52:51 [main] INFO  service.AbstractService - All Resources List: [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 35] 
+2025-02-01 13:52:51 [main] INFO  service.AbstractService - Checking if resource with ID: 24 exists at /api/tracks/24
+2025-02-01 13:52:51 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 24 and resource: null
+2025-02-01 13:52:51 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":24,"title":"Melancholic Melodies in Motion","artist":"Soulful Reverie","duration":181,"year":1957,"album":"Silver Lining Songs"}
+2025-02-01 13:52:51 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-01 13:53:23 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@35dab4eb
+2025-02-01 13:53:24 [main] INFO  service.AbstractService - Response received from POST request: {"id":39,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:53:30 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with playlistId: 0 and resource: null
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"},{"id":2,"title":"Sweet Melodies of Euphoria","artist":"Harmonic Dreams","duration":221,"year":2005,"album":"Aurora's Awakening"},{"id":5,"title":"Luminous Serenade of Reflection","artist":"Mystic Pulse","duration":195,"year":1995,"album":"Velvet Harmony"},{"id":6,"title":"Ocean's Embrace in Moonlight","artist":"Whispering Melodies","duration":229,"year":1968,"album":"Ethereal Dreams"},{"id":7,"title":"Gossamer Melodies of Wonder","artist":"Silver Lining","duration":361,"year":2010,"album":"Summer Breeze Melodies"},{"id":8,"title":"Lullaby for the Soul's Solitude","artist":"Tranquil Echoes","duration":187,"year":1941,"album":"Blissful Whispers"},{"id":9,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":190,"year":2022,"album":"Aurora's Awakening"},{"id":10,"title":"Quicksilver Melodies of Bliss","artist":"Dreamweaver","duration":313,"year":2002,"album":"Moonlit Reflections"},{"id":11,"title":"Sylphlike Melodies in Motion","artist":"Midnight Serenade","duration":353,"year":1943,"album":"Radiant Reverie"},{"id":12,"title":"Enchanted Horizon of Melodies","artist":"Enigmatic Melodies","duration":339,"year":1942,"album":"Winter's Embrace"},{"id":13,"title":"Moonbeam Melodies of Harmony","artist":"Celestial Harmony","duration":246,"year":1997,"album":"Melancholic Melodies"},{"id":14,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":199,"year":1956,"album":"Paradise Melodies"},{"id":15,"title":"Harmonious Journey of Melodies","artist":"Serendipity Soundscapes","duration":235,"year":1961,"album":"Harmonic Horizons"},{"id":16,"title":"Shimmering Twilight's Melodies","artist":"Radiant Harmony","duration":385,"year":2018,"album":"Blissful Whispers"},{"id":17,"title":"Whispers of Hope in Moonlight","artist":"Harmonic Dreams","duration":142,"year":1949,"album":"Tranquil Tunes"},{"id":18,"title":"Whispers of Tranquil Harmony","artist":"Electric Aura","duration":154,"year":1982,"album":"Serenade of Serenity"},{"id":19,"title":"Melodies in Motion's Solitude","artist":"Celestial Harmonies","duration":223,"year":2012,"album":"Symphony of Dreams"},{"id":20,"title":"Tranquil Echoes of Wonder","artist":"Radiant Soul","duration":275,"year":2001,"album":"Moonlit Reflections"},{"id":21,"title":"Enchanted Horizon of Melodies","artist":"Soulful Reverie","duration":420,"year":1967,"album":"Sweet Serendipity"},{"id":22,"title":"Enchanted Forest's Whispers of Serenade","artist":"Enigmatic Melodies","duration":228,"year":1976,"album":"Harmonic Horizons"},{"id":23,"title":"Velvet Serenade of Bliss","artist":"Serendipity Soundscape","duration":209,"year":1961,"album":"Infinite Symphony"},{"id":25,"title":"Summer Breeze's Serenade","artist":"Stellar Pulse","duration":295,"year":2005,"album":"Ethereal Dreams"},{"id":26,"title":"Velvet Serenade of Bliss","artist":"Tranquil Echoes","duration":256,"year":1980,"album":"Golden Memories"},{"id":27,"title":"Seraphic Serenade of Joy","artist":"Electric Serenade","duration":244,"year":1972,"album":"Paradise Melodies"},{"id":28,"title":"Whispers of Hope in Moonlight","artist":"Sonic Renegades","duration":294,"year":1992,"album":"Serenade of Serenity"},{"id":29,"title":"Melodies from the Heart's Solitude","artist":"Astral Pulse","duration":216,"year":1958,"album":"Celestial Serenade"},{"id":30,"title":"Velvet Serenade of Bliss","artist":"Serenity's Echo","duration":323,"year":1976,"album":"Celestial Serenade"},{"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"},{"id":39,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}]}
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - All Resources List: [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 35, 39] 
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Checking if resource with ID: 20 exists at /api/tracks/20
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 20 and resource: null
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":20,"title":"Tranquil Echoes of Wonder","artist":"Radiant Soul","duration":275,"year":2001,"album":"Moonlit Reflections"}
+2025-02-01 13:53:31 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@20ead579
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from POST request: {"id":40,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Checking if resource with ID: 40 exists at /api/tracks/40
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 40 and resource: null
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":40,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Checking if resource with ID: 40 exists at /api/tracks/40
+2025-02-01 13:53:31 [main] WARN  service.AbstractService - Resource with ID 40 not found (HTTP Status: 404).
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@3cc30dee
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from POST request: {"id":41,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Checking if resource with ID: 41 exists at /api/tracks/41
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 41 and resource: null
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":41,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 41 and resource: null
+2025-02-01 13:53:31 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 41 in the system."}
+2025-02-01 13:53:31 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 41
+2025-02-01 13:53:31 [main] ERROR service.PlaylistService - An error occurred while getting  a track with Id : 41 at endpoint: /api/tracks 
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 41 is not found
+	at service.AbstractService.getResourceById(AbstractService.java:159)
+	at service.TrackService.getTrackById(TrackService.java:24)
+	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:41)
+	at org.testng.Assert.expectThrows(Assert.java:2444)
+	at org.testng.Assert.expectThrows(Assert.java:2425)
+	at org.testng.Assert.assertThrows(Assert.java:2391)
+	at tests.trackServiceTests.DeleteTrackTest.deleteNotFoundTrackTest(DeleteTrackTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 13:53:54 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 1 and resource: null
+2025-02-01 13:53:55 [main] INFO  service.AbstractService - Response received from GET request: {"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"}
+2025-02-01 13:54:09 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@35dab4eb
+2025-02-01 13:54:10 [main] INFO  service.AbstractService - Response received from POST request: {"id":42,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:54:10 [main] INFO  service.AbstractService - Checking if resource with ID: 42 exists at /api/tracks/42
+2025-02-01 13:54:10 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 42 and resource: null
+2025-02-01 13:54:10 [main] INFO  service.AbstractService - Response received from GET request: {"id":42,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 13:54:10 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/tracks/{id} with playlistId: 42 and resource: com.example.model.Track@518bfd90
+2025-02-01 13:54:10 [main] INFO  service.AbstractService - Response received from PUT request: {"id":42,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}
+2025-02-01 14:24:32 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-01 14:24:33 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
+2025-02-01 14:24:33 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Playlist IDs retrieved: [2, 5, 11, 13, 14, 16, 21, 22, 23, 25, 26, 28, 30, 1]
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Size of playlist IDs: 14
+2025-02-01 14:24:33 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Playlist IDs retrieved: [2, 5, 11, 13, 14, 16, 21, 22, 23, 25, 26, 28, 30, 1]
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Size of playlist IDs: 14
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-01 14:24:33 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
+2025-02-01 14:24:33 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Playlist IDs retrieved: [2, 5, 11, 13, 14, 16, 21, 22, 23, 25, 26, 28, 30, 1, 1]
+2025-02-01 14:24:33 [main] INFO  service.AbstractService - Size of playlist IDs: 15
+2025-02-01 14:24:39 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:24:39 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@33065d67
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Response received from POST request: {"id":4,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:24:40 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@bc042d5
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Response received from POST request: {"id":5,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@252a8aae
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@350d3f4d
+2025-02-01 14:24:40 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
+2025-02-01 14:24:46 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@48bb62
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Response received from POST request: {"id":6,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:24:47 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 6 to endpoint: /api/playlists
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Checking if resource with ID: 6 exists at /api/playlists/6
+2025-02-01 14:24:47 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists/{id} to delete a playlist with ID: 6
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/playlists/{id} with playlistId: 6 and resource: null
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":6,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:24:47 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 6 to endpoint: /api/playlists
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Checking if resource with ID: 6 exists at /api/playlists/6
+2025-02-01 14:24:47 [main] WARN  service.AbstractService - Resource with ID 6 not found (HTTP Status: 404).
+2025-02-01 14:24:47 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@3a37a501
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Response received from POST request: {"id":7,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:24:47 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 7 to endpoint: /api/playlists
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Checking if resource with ID: 7 exists at /api/playlists/7
+2025-02-01 14:24:47 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists/{id} to delete a playlist with ID: 7
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/playlists/{id} with playlistId: 7 and resource: null
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":7,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:24:47 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with playlistId: 7 and resource: null
+2025-02-01 14:24:47 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 7 in the system."}
+2025-02-01 14:24:47 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 7
+2025-02-01 14:24:53 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@5524cca1
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Response received from POST request: {"id":43,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:24:54 [main] INFO  t.p.AbstractPlaylistTest - New track with id: 43 created
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-01 14:24:54 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 43 from playlist Id: 1
+2025-02-01 14:24:54 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 43 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Playlist IDs retrieved: [2, 5, 11, 13, 14, 16, 21, 22, 23, 25, 26, 28, 30, 1, 1, 43]
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Size of playlist IDs: 16
+2025-02-01 14:24:54 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 43 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Playlist IDs retrieved: [2, 5, 11, 13, 14, 16, 21, 22, 23, 25, 26, 28, 30, 1, 1, 43]
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Size of playlist IDs: 16
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-01 14:24:54 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists to delete track with ID: 43 from playlist Id: 1
+2025-02-01 14:24:54 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 43 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Playlist IDs retrieved: [2, 5, 11, 13, 14, 16, 21, 22, 23, 25, 26, 28, 30, 1, 1]
+2025-02-01 14:24:54 [main] INFO  service.AbstractService - Size of playlist IDs: 15
+2025-02-01 14:24:54 [main] ERROR service.AbstractService - No resource IDs found in the response.
+2025-02-01 14:25:00 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:25:00 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@33065d67
+2025-02-01 14:25:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":8,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:01 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-01 14:25:01 [main] ERROR service.AbstractService - Invalid playlistId: -1
+2025-02-01 14:25:01 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:25:01 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@41eb94bc
+2025-02-01 14:25:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":9,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:01 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-01 14:25:01 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with playlistId: 9 and resource: null
+2025-02-01 14:25:01 [main] INFO  service.AbstractService - Response received from GET request: {"id":9,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:06 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:25:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@33065d67
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Response received from POST request: {"id":10,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:07 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 10 to endpoint: /api/playlists
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Checking if resource with ID: 10 exists at /api/playlists/10
+2025-02-01 14:25:07 [main] INFO  service.PlaylistService - Sending PUT request to endpoint: /api/playlists/{id} to update a playlist details with ID: 10
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 10 and resource: com.example.model.PlayList@70972170
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Response received from PUT request: {"id":10,"name":"updated_name","description":"updated_description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:07 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 1
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with playlistId: -1 and resource: com.example.model.PlayList@ccf91df
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Response received from POST request: {"id":11,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:07 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 11 to endpoint: /api/playlists
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Checking if resource with ID: 11 exists at /api/playlists/11
+2025-02-01 14:25:07 [main] INFO  service.PlaylistService - Sending PUT request to endpoint: /api/playlists/{id} to update a User of playlist with ID: 11
+2025-02-01 14:25:07 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with playlistId: 11 and resource: null
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Response received from GET request: {"id":11,"name":"name","description":"description","isPublic":true,"userId":1,"tracks":[]}
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with playlistId: 11 and resource: com.example.model.PlayList@6812fa3a
+2025-02-01 14:25:07 [main] INFO  service.AbstractService - Response received from PUT request: {"statusCode":400,"statusMessage":"Bad Request","errorMessage":"Unable to change the owner of playlist. Original ownerID - 1."}
+2025-02-01 14:25:12 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@35dab4eb
+2025-02-01 14:25:13 [main] INFO  service.AbstractService - Response received from POST request: {"id":44,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:19 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with playlistId: 0 and resource: null
+2025-02-01 14:25:19 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"},{"id":2,"title":"Sweet Melodies of Euphoria","artist":"Harmonic Dreams","duration":221,"year":2005,"album":"Aurora's Awakening"},{"id":5,"title":"Luminous Serenade of Reflection","artist":"Mystic Pulse","duration":195,"year":1995,"album":"Velvet Harmony"},{"id":6,"title":"Ocean's Embrace in Moonlight","artist":"Whispering Melodies","duration":229,"year":1968,"album":"Ethereal Dreams"},{"id":7,"title":"Gossamer Melodies of Wonder","artist":"Silver Lining","duration":361,"year":2010,"album":"Summer Breeze Melodies"},{"id":8,"title":"Lullaby for the Soul's Solitude","artist":"Tranquil Echoes","duration":187,"year":1941,"album":"Blissful Whispers"},{"id":9,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":190,"year":2022,"album":"Aurora's Awakening"},{"id":10,"title":"Quicksilver Melodies of Bliss","artist":"Dreamweaver","duration":313,"year":2002,"album":"Moonlit Reflections"},{"id":11,"title":"Sylphlike Melodies in Motion","artist":"Midnight Serenade","duration":353,"year":1943,"album":"Radiant Reverie"},{"id":12,"title":"Enchanted Horizon of Melodies","artist":"Enigmatic Melodies","duration":339,"year":1942,"album":"Winter's Embrace"},{"id":13,"title":"Moonbeam Melodies of Harmony","artist":"Celestial Harmony","duration":246,"year":1997,"album":"Melancholic Melodies"},{"id":14,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":199,"year":1956,"album":"Paradise Melodies"},{"id":15,"title":"Harmonious Journey of Melodies","artist":"Serendipity Soundscapes","duration":235,"year":1961,"album":"Harmonic Horizons"},{"id":16,"title":"Shimmering Twilight's Melodies","artist":"Radiant Harmony","duration":385,"year":2018,"album":"Blissful Whispers"},{"id":17,"title":"Whispers of Hope in Moonlight","artist":"Harmonic Dreams","duration":142,"year":1949,"album":"Tranquil Tunes"},{"id":18,"title":"Whispers of Tranquil Harmony","artist":"Electric Aura","duration":154,"year":1982,"album":"Serenade of Serenity"},{"id":19,"title":"Melodies in Motion's Solitude","artist":"Celestial Harmonies","duration":223,"year":2012,"album":"Symphony of Dreams"},{"id":21,"title":"Enchanted Horizon of Melodies","artist":"Soulful Reverie","duration":420,"year":1967,"album":"Sweet Serendipity"},{"id":22,"title":"Enchanted Forest's Whispers of Serenade","artist":"Enigmatic Melodies","duration":228,"year":1976,"album":"Harmonic Horizons"},{"id":23,"title":"Velvet Serenade of Bliss","artist":"Serendipity Soundscape","duration":209,"year":1961,"album":"Infinite Symphony"},{"id":25,"title":"Summer Breeze's Serenade","artist":"Stellar Pulse","duration":295,"year":2005,"album":"Ethereal Dreams"},{"id":26,"title":"Velvet Serenade of Bliss","artist":"Tranquil Echoes","duration":256,"year":1980,"album":"Golden Memories"},{"id":27,"title":"Seraphic Serenade of Joy","artist":"Electric Serenade","duration":244,"year":1972,"album":"Paradise Melodies"},{"id":28,"title":"Whispers of Hope in Moonlight","artist":"Sonic Renegades","duration":294,"year":1992,"album":"Serenade of Serenity"},{"id":29,"title":"Melodies from the Heart's Solitude","artist":"Astral Pulse","duration":216,"year":1958,"album":"Celestial Serenade"},{"id":30,"title":"Velvet Serenade of Bliss","artist":"Serenity's Echo","duration":323,"year":1976,"album":"Celestial Serenade"},{"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"},{"id":39,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":42,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"},{"id":43,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":44,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}]}
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - All Resources List: [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30, 35, 39, 42, 43, 44] 
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Checking if resource with ID: 13 exists at /api/tracks/13
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 13 and resource: null
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":13,"title":"Moonbeam Melodies of Harmony","artist":"Celestial Harmony","duration":246,"year":1997,"album":"Melancholic Melodies"}
+2025-02-01 14:25:20 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@3d299393
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Response received from POST request: {"id":45,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Checking if resource with ID: 45 exists at /api/tracks/45
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 45 and resource: null
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":45,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Checking if resource with ID: 45 exists at /api/tracks/45
+2025-02-01 14:25:20 [main] WARN  service.AbstractService - Resource with ID 45 not found (HTTP Status: 404).
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@6dee8ae6
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Response received from POST request: {"id":46,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Checking if resource with ID: 46 exists at /api/tracks/46
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with playlistId: 46 and resource: null
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":46,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 46 and resource: null
+2025-02-01 14:25:20 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 46 in the system."}
+2025-02-01 14:25:20 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 46
+2025-02-01 14:25:20 [main] ERROR service.PlaylistService - An error occurred while getting  a track with Id : 46 at endpoint: /api/tracks 
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 46 is not found
+	at service.AbstractService.getResourceById(AbstractService.java:159)
+	at service.TrackService.getTrackById(TrackService.java:25)
+	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:41)
+	at org.testng.Assert.expectThrows(Assert.java:2444)
+	at org.testng.Assert.expectThrows(Assert.java:2425)
+	at org.testng.Assert.assertThrows(Assert.java:2391)
+	at tests.trackServiceTests.DeleteTrackTest.deleteNotFoundTrackTest(DeleteTrackTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 14:25:26 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 1 and resource: null
+2025-02-01 14:25:27 [main] INFO  service.AbstractService - Response received from GET request: {"id":1,"title":"Enchanted Forest's Whispers of Serenade","artist":"Stellar Pulse","duration":206,"year":1941,"album":"Ocean Serenity"}
+2025-02-01 14:25:31 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with playlistId: -1 and resource: com.example.model.Track@35dab4eb
+2025-02-01 14:25:32 [main] INFO  service.AbstractService - Response received from POST request: {"id":47,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:32 [main] INFO  service.AbstractService - Checking if resource with ID: 47 exists at /api/tracks/47
+2025-02-01 14:25:32 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with playlistId: 47 and resource: null
+2025-02-01 14:25:32 [main] INFO  service.AbstractService - Response received from GET request: {"id":47,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-01 14:25:32 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/tracks/{id} with playlistId: 47 and resource: com.example.model.Track@73844119
+2025-02-01 14:25:32 [main] INFO  service.AbstractService - Response received from PUT request: {"id":47,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}
+2025-02-01 14:25:37 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with playlistId: -1 and resource: com.example.model.User@35dab4eb
+2025-02-01 14:25:38 [main] INFO  service.AbstractService - Response received from POST request: {"id":32,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 14:25:44 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with playlistId: -1 and resource: com.example.model.User@3ba987b8
+2025-02-01 14:25:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":33,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 14:25:45 [main] INFO  service.AbstractService - Checking if resource with ID: 33 exists at /api/users/{id}/33
+2025-02-01 14:25:45 [main] ERROR service.AbstractService - An error occurred while checking resource presence: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: id.
+java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: id.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:72)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at service.AbstractService.getGetAllResponses(AbstractService.java:124)
+	at service.AbstractService.isPresentResource(AbstractService.java:228)
+	at service.UserService.deleteUserById(UserService.java:57)
+	at tests.userServiceTests.DeleteUserTest.deleteNotFoundUserTest(DeleteUserTest.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 14:25:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with playlistId: -1 and resource: com.example.model.User@333c8791
+2025-02-01 14:25:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":34,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 14:25:45 [main] INFO  service.AbstractService - Checking if resource with ID: 34 exists at /api/users/{id}/34
+2025-02-01 14:25:45 [main] ERROR service.AbstractService - An error occurred while checking resource presence: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: id.
+java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: id.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:72)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at service.AbstractService.getGetAllResponses(AbstractService.java:124)
+	at service.AbstractService.isPresentResource(AbstractService.java:228)
+	at service.UserService.deleteUserById(UserService.java:57)
+	at tests.userServiceTests.DeleteUserTest.deleteUserDetailsTest(DeleteUserTest.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 14:26:54 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with playlistId: 1 and resource: null
+2025-02-01 14:26:55 [main] INFO  service.AbstractService - Response received from GET request: {"id":1,"firstName":"Ava","lastName":"Williams","email":"Ava_Williams@outlook.com"}
+2025-02-01 14:27:23 [main] INFO  service.AbstractService - Checking if resource with ID: 2 exists at /api/users/{id}/2
+2025-02-01 14:27:24 [main] ERROR service.AbstractService - An error occurred while checking resource presence: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: id.
+java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: id.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:72)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at service.AbstractService.getGetAllResponses(AbstractService.java:124)
+	at service.AbstractService.isPresentResource(AbstractService.java:228)
+	at service.UserService.updateUserDetails(UserService.java:42)
+	at tests.userServiceTests.UpdateUserTest.updateUserDetailsTest(UpdateUserTest.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-01 14:30:09 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with playlistId: -1 and resource: com.example.model.User@3ba987b8
+2025-02-01 14:30:10 [main] INFO  service.AbstractService - Response received from POST request: {"id":35,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 14:30:10 [main] INFO  service.AbstractService - Checking if resource with ID: 35 exists at /api/users/{id}/35
+2025-02-01 14:30:10 [main] WARN  service.AbstractService - Resource with ID 35 not found (HTTP Status: 404).
+2025-02-01 14:30:10 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with playlistId: -1 and resource: com.example.model.User@3204e238
+2025-02-01 14:30:10 [main] INFO  service.AbstractService - Response received from POST request: {"id":36,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-01 14:30:10 [main] INFO  service.AbstractService - Checking if resource with ID: 36 exists at /api/users/{id}/36
+2025-02-01 14:30:10 [main] WARN  service.AbstractService - Resource with ID 36 not found (HTTP Status: 404).
+2025-02-01 14:30:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with playlistId: 1 and resource: null
+2025-02-01 14:30:23 [main] INFO  service.AbstractService - Response received from GET request: {"id":1,"firstName":"Ava","lastName":"Williams","email":"Ava_Williams@outlook.com"}
+2025-02-01 14:30:29 [main] INFO  service.AbstractService - Checking if resource with ID: 2 exists at /api/users/{id}/2
+2025-02-01 14:30:30 [main] WARN  service.AbstractService - Resource with ID 2 not found (HTTP Status: 404).

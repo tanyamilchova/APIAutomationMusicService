@@ -1,6 +1,6 @@
 package com.example.util;
 
-import com.example.exseption.NotFoundException;
+import com.example.exseption.ResourceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,7 @@ public class TestDataReader {
            return resourceBundle.getString(key);
        } catch (Exception e) {
             logger.error("Error in retrieving the resource from property.");
-            throw new NotFoundException("Key: " + key + " does not exist in properties");
+            throw new ResourceException("Key: " + key + " does not exist in properties");
         }
     }
 }

@@ -16,9 +16,8 @@ public class UpdateTrackTest {
 
         Track updatedTrack = service.updateTrackDetails(id);
 
-        assertEquals("NewTitle", updatedTrack.getTitle());
-        assertEquals("NewArtist", updatedTrack.getArtist());
-        assertEquals("NewAlbum", updatedTrack.getAlbum());
-
+        assertEquals("newTitle", updatedTrack.getTitle());
+        assertEquals("newArtist", updatedTrack.getArtist());
+        assertEquals("newAlbum", updatedTrack.getAlbum());
     }
 }

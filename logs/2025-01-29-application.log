@@ -23,7 +23,7 @@
 2025-01-29 09:32:28 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 34 in the system."}
 2025-01-29 09:32:28 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 34
 2025-01-29 09:32:28 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 34
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 34 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 34 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:28)
@@ -116,7 +116,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.User 
 2025-01-29 09:34:27 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 35 in the system."}
 2025-01-29 09:34:27 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 35
 2025-01-29 09:34:27 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 35
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 35 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 35 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:28)
@@ -284,7 +284,7 @@ java.lang.RuntimeException: Failed to delete resource: 3 ,statusCode: 404
 2025-01-29 09:36:47 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 32 in the system."}
 2025-01-29 09:36:47 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 32
 2025-01-29 09:36:47 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 32
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 32 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 32 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:34)
@@ -376,7 +376,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.Track
 2025-01-29 09:38:22 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 1 in the system."}
 2025-01-29 09:38:22 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 1
 2025-01-29 09:38:22 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 1
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 1 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 1 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.GetTrackById.getTrackByIdTest(GetTrackById.java:16)
@@ -466,7 +466,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.Track
 2025-01-29 09:40:59 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 36 in the system."}
 2025-01-29 09:40:59 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 36
 2025-01-29 09:40:59 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 36
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 36 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 36 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:35)
@@ -656,7 +656,7 @@ java.lang.RuntimeException: Failed to delete resource: 3 ,statusCode: 404
 2025-01-29 09:50:46 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 10 in the system."}
 2025-01-29 09:50:46 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 10
 2025-01-29 09:50:46 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 10
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 10 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 10 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:38)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:27)
@@ -762,7 +762,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.PlayL
 2025-01-29 10:02:47 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 7 in the system."}
 2025-01-29 10:02:47 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 7
 2025-01-29 10:02:47 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 7
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 7 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 7 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:38)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -1599,7 +1599,7 @@ java.lang.RuntimeException: Failed to retrieve data: 404
 2025-01-29 11:58:43 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 7 in the system."}
 2025-01-29 11:58:43 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 7
 2025-01-29 11:58:43 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 7
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 7 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 7 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:37)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -1691,7 +1691,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.PlayL
 2025-01-29 12:02:28 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 9 in the system."}
 2025-01-29 12:02:28 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 9
 2025-01-29 12:02:28 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 9
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 9 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 9 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:37)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -2097,7 +2097,7 @@ java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 
 2025-01-29 12:45:42 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 33 in the system."}
 2025-01-29 12:45:42 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 33
 2025-01-29 12:45:42 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 33
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 33 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 33 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:35)
@@ -2188,7 +2188,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.Track
 2025-01-29 12:46:11 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 32 in the system."}
 2025-01-29 12:46:11 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 32
 2025-01-29 12:46:11 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 32
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 32 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 32 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:133)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:29)
@@ -2537,7 +2537,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.User 
 2025-01-29 17:23:54 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 23 in the system."}
 2025-01-29 17:23:54 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 23
 2025-01-29 17:23:54 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 23
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 23 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 23 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:151)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:37)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -2747,7 +2747,7 @@ java.lang.RuntimeException: Failed to delete resource: 3 ,statusCode: 404
 2025-01-29 17:35:04 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 45 in the system."}
 2025-01-29 17:35:04 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 45
 2025-01-29 17:35:04 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 45
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 45 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 45 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:151)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:35)
@@ -2838,7 +2838,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.Track
 2025-01-29 17:36:43 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 35 in the system."}
 2025-01-29 17:36:43 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 35
 2025-01-29 17:36:43 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 35
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 35 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 35 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:151)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:29)
@@ -2967,7 +2967,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.User 
 2025-01-29 17:43:08 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 31 in the system."}
 2025-01-29 17:43:08 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 31
 2025-01-29 17:43:08 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 31
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 31 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 31 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:141)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:37)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -3100,7 +3100,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.PlayL
 2025-01-29 17:45:33 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 38 in the system."}
 2025-01-29 17:45:33 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 38
 2025-01-29 17:45:33 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 38
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 38 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 38 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:141)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:29)
@@ -3255,7 +3255,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.User 
 2025-01-29 18:09:53 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 39 in the system."}
 2025-01-29 18:09:53 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 39
 2025-01-29 18:09:53 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 39
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 39 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 39 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:130)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:37)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -3387,7 +3387,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.PlayL
 2025-01-29 18:14:09 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 54 in the system."}
 2025-01-29 18:14:09 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 54
 2025-01-29 18:14:09 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 54
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 54 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 54 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:130)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:45)
@@ -3634,7 +3634,7 @@ java.lang.RuntimeException: Failed to delete resource: 3 ,statusCode: 404
 2025-01-29 18:20:06 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 41 in the system."}
 2025-01-29 18:20:06 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 41
 2025-01-29 18:20:06 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 41
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 41 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 41 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:130)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:29)
@@ -3762,7 +3762,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.User 
 2025-01-29 18:24:48 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 46 in the system."}
 2025-01-29 18:24:48 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 46
 2025-01-29 18:24:48 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/playlists/{id} with resourceId: 46
-com.example.exseption.NotFoundException: Resource: class com.example.model.PlayList ID: 46 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.PlayList ID: 46 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:123)
 	at service.PlaylistService.getPlaylistById(PlaylistService.java:37)
 	at tests.playlistServiceTests.DeletePlaylistTest.lambda$deleteNotFoundPLAYLISTTest$0(DeletePlaylistTest.java:29)
@@ -3889,7 +3889,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.PlayL
 2025-01-29 18:25:57 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 58 in the system."}
 2025-01-29 18:25:57 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 58
 2025-01-29 18:25:57 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/tracks/{id} with resourceId: 58
-com.example.exseption.NotFoundException: Resource: class com.example.model.Track ID: 58 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 58 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:123)
 	at service.TrackService.getTrackById(TrackService.java:15)
 	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:45)
@@ -3985,7 +3985,7 @@ com.example.exseption.NotFoundException: Resource: class com.example.model.Track
 2025-01-29 18:27:07 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 44 in the system."}
 2025-01-29 18:27:07 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 44
 2025-01-29 18:27:07 [main] ERROR service.AbstractService - Failed to get resource at endpoint: /api/users/{id} with resourceId: 44
-com.example.exseption.NotFoundException: Resource: class com.example.model.User ID: 44 is not found
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 44 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:123)
 	at service.UserService.getUserById(UserService.java:13)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:29)

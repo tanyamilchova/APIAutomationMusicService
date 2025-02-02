@@ -1,20 +1,24 @@
 package service;
 
-import com.example.exseption.NotFoundException;
+import com.example.exseption.ResourceException;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
 public class AbstractService {
 
     private final Logger logger = LoggerFactory.getLogger(AbstractService.class);
+
+    private final String postRequest = "POST";
+    private final String getRequest = "GET";
+    private final String getAllRequest = "GET_ALL";
+    private final String putRequest = "PUT";
+    private final String deleteRequest = "DELETE";
 
     public  ValidatableResponse getValidateResponseResourceById(String endpoint, long resourceId){
         checkIsValidEndpoint(endpoint);
@@ -43,149 +47,175 @@ public class AbstractService {
             }
     }
 
-    public <T> ResourceResponse<T> createResource(T resource, String endpoint) {
-        checkIfValidEndpointAndResource(endpoint, resource);
-        try {
-            Response response = given()
-                    .header("Content-Type", "application/json")
-                    .body(resource)
-                    .when()
-                    .post(endpoint);
+    public <T> ResourceResponse<T> makeRequest(Class<T> resourceClass, T resource, String endpoint, long resourceId, String requestType) {
 
-            T updatedResource = response.as((Class<T>) resource.getClass());
+        try {
+            logger.info("Sending " + requestType +" request to endpoint: {} with playlistId: {} and resource: {}", endpoint, resourceId, resource);
+            T updatedResource;
+            Response response;
+            switch (requestType) {
+                case "POST" -> {
+                    response = getPostResponse(endpoint, resource);
+                    updatedResource = response.as((Class<T>) resource.getClass());
+                }
+                case "PUT" -> {
+                    response = getPutResponse(endpoint, resource, resourceId);
+                    updatedResource = response.as((Class<T>) resource.getClass());
+                }
+
+                case "DELETE" -> {
+                    response = getDeleteResponse(endpoint, resource, resourceId);
+                    updatedResource = response.as(resourceClass);
+                }
+                case "GET" -> {
+                    response = getGetResponse(endpoint, resourceId);
+                    updatedResource = response.as(resourceClass);
+                }
+                case "GET_ALL" -> {
+                    response = getGetAllResponses(endpoint);
+                    updatedResource = response.as(resourceClass);
+                }
+
+                default -> throw new IllegalStateException("Unexpected value: " + requestType);
+            }
+            logger.info("Response received from " + requestType + " request: {}", response.asString());
+
             return new ResourceResponse<>(updatedResource, response);
         }
         catch (IllegalArgumentException e){
             logger.error("Illegal argument provided", e);
             throw e;
         }catch (Exception e){
-            logger.error("Failed to create resource. Resource: {}, Endpoint: {}", resource,endpoint, e);
+            logger.error("Failed to make request to Endpoint: {} Resource: {}",endpoint, resource, e);
             throw new RuntimeException("Failed to create resource: " + e.getMessage(), e);
         }
     }
 
+    private <T> Response getDeleteResponse(String endpoint, T resource, long resourceId) {
+    return given()
+                .pathParam("id", resourceId)
+                .when()
+                .delete(endpoint);
+    }
 
+    private <T> Response getPutResponse(String endpoint, T resource, long resourceId) {
+        return given()
+                .pathParam("id", resourceId)
+                .header("Content-Type", "application/json")
+                .body(resource)
+                .when()
+                .put(endpoint);
+
+    }
+
+    private <T> Response getGetResponse(String endpoint, long resourceId) {
+        return given()
+                .header("Content-Type", "application/json")
+                .pathParam("id", resourceId)
+                .when()
+                .get(endpoint);
+
+    }
+    private <T> Response getGetAllResponses(String endpoint) {
+       return given()
+                .header("Content-Type", "application/json")
+                .when()
+                .get(endpoint);
+
+    }
+
+    private <T> Response getPostResponse(String endpoint, T resource) {
+        return given()
+                .header("Content-Type", "application/json")
+                .body(resource)
+                .when()
+                .post(endpoint);
+    }
+
+
+    public <T> ResourceResponse<T> createResource(T resource, String endpoint) {
+        checkIfValidEndpointAndResource(endpoint, resource);
+        return makeRequest(null, resource, endpoint, -1, postRequest);
+
+    }
 
     public <T> ResourceResponse <T> updateResource(T resource, String endpoint, long resourceId){
         checkIfValidEndpointAndResource(endpoint, resource);
         checkIfZeroOrNegative(resourceId);
-        try {
-            logger.info("Sending PUT request to endpoint: {} with playlistId: {} and resource: {}", endpoint, resourceId, resource);
-            Response response = given()
-                    .pathParam("id", resourceId)
-                    .header("Content-Type", "application/json")
-                    .body(resource)
-                    .when()
-                    .put(endpoint);
+        ResourceResponse<T> response = makeRequest(null, resource, endpoint, resourceId, putRequest);
 
-            logger.info("Response received from PUT request: {}", response.asString());
-
-            if(isNotFoundResource(response, endpoint,resourceId)){
-                throw new NotFoundException("Resource: "+ resource + " ID: " + resourceId +" is not found");
-            }
-
-            T updatedResource = response.as((Class<T>) resource.getClass());
-            return new ResourceResponse<>(updatedResource, response);
-
-        } catch (IllegalArgumentException e) {
-            logger.error("Illegal argument provided", e);
-            throw e;
-        } catch (Exception e) {
-            logger.error("Failed to update resource at endpoint: {} with playlistId: {}. Resource: {}", endpoint, resourceId, resource, e);
-            throw new RuntimeException("Failed to update resource: " + e.getMessage(), e);
-        }
+        return response;
     }
-
 
 
     public <T> T getResourceById(Class<T> resourceClass, String endpoint, long resourceId){
         checkIfValidEndpointAndResource(endpoint, resourceId);
         checkIfZeroOrNegative(resourceId);
 
-        try {
-            logger.info("Sending GET request to endpoint: {} with resourceId: {}", endpoint, resourceId);
-            Response response = given()
-                    .pathParam("id", resourceId)
-                    .when()
-                    .get(endpoint);
-
-            logger.info("Response received from GET request: {}", response.asString());
-
-            if(isNotFoundResource(response, endpoint,resourceId)){
-                throw new NotFoundException("Resource: "+ resourceClass + " ID: " + resourceId +" is not found");
-            }
-            return response.as(resourceClass);
-        } catch (IllegalArgumentException e) {
-            logger.error("Illegal argument provided", e);
-            throw e;
-        } catch (Exception e) {
-            logger.error("Failed to get resource at endpoint: {} with resourceId: {}", endpoint, resourceId, e);
-            throw new RuntimeException("Failed to get resource: " + e.getMessage(), e);
+        ResourceResponse<T> response = makeRequest(resourceClass ,null, endpoint, resourceId, getRequest);
+        Response rawResponse = response.getRawResponse();
+        if(isErrorResource(rawResponse, endpoint,resourceId)){
+            throw new ResourceException("Resource: "+ resourceClass + " ID: " + resourceId +" is not found");
         }
+        return rawResponse.as(resourceClass);
+
     }
 
 
-    public  boolean isPresentResource(String endpoint, long resourceId, String listPath) {
+    public <T> T deleteResourceById(Class<T> resourceClass, String endpoint, long resourceId){
         checkIsValidEndpoint(endpoint);
+        ResourceResponse<T> response = makeRequest(resourceClass ,null, endpoint, resourceId, deleteRequest);
+        Response rawResponse = response.getRawResponse();
+        if(isErrorResource(rawResponse, endpoint,resourceId)){
+            throw new ResourceException("Resource: "+ resourceClass + " ID: " + resourceId +" is not found");
+        }
+        return rawResponse.as(resourceClass);
+    }
+
+ public boolean isPresentResource(String endpoint, long resourceId) {
         checkIfZeroOrNegative(resourceId);
+        String resourceEndpoint = endpoint + "/" + resourceId;
+
         try {
-            logger.info("Sending GET request to endpoint: {} to check if resource with ID: {} exists", endpoint, resourceId);
-            Response response = given()
-                    .header("Content-Type", "application/json")
-                    .when()
-                    .get(endpoint);
-            if (errorResponse(response)) {
-                logger.error("Failed to retrieve data. HTTP Status Code: {}", response.statusCode());
-                throw new RuntimeException("Failed to retrieve data: " + response.statusCode());
-            }
+            logger.info("Checking if resource with ID: {} exists at {}", resourceId, resourceEndpoint);
+            Response response = getGetAllResponses(resourceEndpoint);
 
-            List<Object> playlistIds = response.jsonPath().getList(listPath);
-            if (playlistIds != null) {
-                logger.info("Playlist IDs count: {}", playlistIds.size());
-            } else {
-                logger.warn("No playlist IDs found in the response.");
+            if (notSuccessfulResponse(response)) {
+                logger.warn("Resource with ID {} not found (HTTP Status: {}).", resourceId, response.statusCode());
+                return false;
             }
-            if (playlistIds != null && !playlistIds.isEmpty()) {
-                return playlistIds.contains(resourceId);
-            } else {
-                logger.error("Failed to retrieve 'id' list from the response.");
-                throw new RuntimeException("Failed to retrieve 'id' list from the response.");
-            }
-
-        } catch (IllegalArgumentException e) {
-            logger.error("Illegal argument provided", e);
-            throw e;
+            return true;
         } catch (Exception e) {
-            logger.error("An error occurred while checking if resource is present at endpoint: {} with resourceId: {}", endpoint, resourceId, e);
-            throw new RuntimeException("An error occurred while checking if resource is present: " + e.getMessage(), e);
+            logger.error("An error occurred while checking resource presence: {}", e.getMessage(), e);
+            throw new RuntimeException("Error checking resource presence: " + e.getMessage(), e);
         }
     }
+
+
+
+
 
 
     public  long getNumberOfResources(long id, long trackId, String endpoint, String listData) {
         checkIsValidEndpoint(endpoint);
         try {
             logger.info("Sending GET request to endpoint: {}", endpoint);
-            Response response = given()
-                    .pathParams("id", id)
-                    .header("Content-Type", "application/json")
-                    .when()
-                    .get(endpoint);
-            if (errorResponse(response)) {
+            Response response = getGetResponse(endpoint, id);
+
+            if (notSuccessfulResponse(response)) {
                 logger.error("Failed to retrieve data - GET request. HTTP Status Code: {}", response.statusCode());
                 throw new RuntimeException("Failed to retrieve data: " + response.statusCode());
             }
-            logger.info("Response body: {}", response.getBody().asString());
+
             List<Integer> playlistIds = response.jsonPath().getList(listData);
             logger.info("Playlist IDs retrieved: {}", playlistIds);
 
             Map<Long, Long> tracksMap = putTracksIdsIntoMap(playlistIds);
 
-            logger.info("Size of playlist IDs: {}", playlistIds.size());
             if (tracksMap.containsKey(trackId)) {
                 return tracksMap.get(trackId);
             } else {
-                logger.warn("No resource IDs found in the response.");
+                logger.error("No resource IDs found in the response.");
                 return 0;
             }
         } catch (IllegalArgumentException e) {
@@ -199,6 +229,7 @@ public class AbstractService {
 
 
     private Map<Long, Long> putTracksIdsIntoMap(List<Integer> playlistIds) {
+        logger.info("Size of playlist IDs: {}", playlistIds.size());
         Map<Long, Long> tracksMap = new HashMap<>();
         if (!playlistIds.isEmpty()) {
             for (long trId : playlistIds) {
@@ -210,48 +241,36 @@ public class AbstractService {
                 }
             }
         }
+
         return tracksMap;
     }
 
-    public <T> T deleteResourceById(Class<T> resourceClass, String endpoint, long resourceId){
-        checkIsValidEndpoint(endpoint);
-        try {
-            logger.info("Sending DELETE request to endpoint: {} for resourceId: {}", endpoint, resourceId);
-            Response response = given()
-                    .pathParam("id", resourceId)
-                    .when()
-                    .delete(endpoint);
-            logger.info("Received response with status code: {}", response.statusCode());
+    private boolean isErrorResource(Response response, String endpoint, long resourceId) {
+            int statusCode = response.getStatusCode();
 
-            if (errorResponse(response)) {
-                logger.error("Failed to delete resource. HTTP Status Code: {}", response.statusCode());
-                throw new RuntimeException("Failed to delete resource: " + resourceId + " ,statusCode: " + response.statusCode());
-            }
-            logger.info("Response body: {}", response.asString());
-
-            if(isNotFoundResource(response, endpoint, resourceId)) {
-                return response.as(resourceClass);
-            }
-        } catch (IllegalArgumentException e) {
-            logger.error("Illegal argument provided", e);
-            throw e;
-        } catch (Exception e) {
-            logger.error("An error occurred while deleting resource from endpoint: {} with resourceId: {}", endpoint, resourceId, e);
-            throw new RuntimeException("An error occurred while deleting resource: " + e.getMessage(), e);
+            switch (statusCode) {
+                case 400:
+                    logger.error("Bad request at endpoint: {} with resourceId: {}", endpoint, resourceId);
+                    return true;
+                case 401:
+                    logger.error("Unauthorized access to endpoint: {} with resourceId: {}", endpoint, resourceId);
+                    return true;
+                case 403:
+                    logger.error("Forbidden access to endpoint: {} with resourceId: {}", endpoint, resourceId);
+                    return true;
+                case 404:
+                    logger.error("Resource not found at endpoint: {} with resourceId: {}", endpoint, resourceId);
+                    return true;
+                case 500:
+                    logger.error("Internal server error at endpoint: {} with resourceId: {}", endpoint, resourceId);
+                    return true;
+                default:
+                    return false;
         }
-        return null;
+
     }
 
-
-    private boolean isNotFoundResource(Response response, String endpoint, long resourceId) {
-        if (response.getStatusCode() == 404) {
-            logger.error("Resource not found at endpoint: {} with resourceId: {}", endpoint, resourceId);
-            return true;
-        }
-        return false;
-    }
-
-    private boolean errorResponse(Response response){
+    private boolean notSuccessfulResponse(Response response){
         return response.statusCode() < 200 || response.statusCode() > 299;
     }
 
@@ -269,11 +288,28 @@ public class AbstractService {
         }
     }
 
-    private boolean checkIsValidEndpoint(String endpoint) {
+    private void checkIsValidEndpoint(String endpoint) {
         if (endpoint == null || endpoint.isBlank() ) {
             logger.error("Invalid endpoint: {}", endpoint);
             throw new IllegalArgumentException("Endpoint cannot be null or blank");
         }
-        return true;
+    }
+
+    public  <T> List<Integer> getAllResourcesIds(Class<T> resourseClass, String endpoint) {
+        checkIsValidEndpoint(endpoint);
+        ResourceResponse<T> response = makeRequest(resourseClass, null, endpoint, 0,getAllRequest );
+
+        List<Integer> allResources = response.getAllResoursesId("tracks.id");
+        logger.info("All Resources List: {} ",allResources);
+        return allResources;
+    }
+
+    public <T> Integer getRandomResourceId(Class<T> resourseClass, String endpoint){
+        List<Integer> resourceIds = getAllResourcesIds(resourseClass, endpoint);
+
+        Random random = new Random();
+        int randomPosition =random.nextInt(resourceIds.size());
+
+        return resourceIds.get(randomPosition);
     }
 }

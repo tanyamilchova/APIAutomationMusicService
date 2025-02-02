@@ -17,7 +17,7 @@ public class DeletePlaylistTest extends AbstractPlaylistTest{
         PlayList playlist = service.createPlaylist(userId);
         long playlistId = playlist.getId();
     service.deletePlaylistById(playlistId);
-        assertFalse(service.resourceIsPresent(playlistId));
+        assertFalse(service.playlistIsPresent(playlistId));
     }
 
     @Test

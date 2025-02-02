@@ -1,7 +1,6 @@
 package tests.trackServiceTests;
 
 import com.example.model.Track;
-import com.example.util.Util;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import service.PlaylistService;
@@ -25,30 +24,26 @@ public class DeleteTrackTest {
 
     @Test
     public void deleteTrackDetailsTest(){
-//        Track track = service.createTrack();
-//        long id = track.getId();
         long id = getNewTrackId(service);
 
         service.deleteTrackById(id);
-        assertFalse(service.checkIfSuccessfullyDeleted(id));
+        assertFalse(service.trackExists(id));
     }
 
 
 
     @Test
     public void deleteNotFoundTrackTest() {
-//        Track createdTrack = service.createTrack();
         long trackIdToDelete = getNewTrackId(service);
 
         service.deleteTrackById(trackIdToDelete);
 
         assertThrows(RuntimeException.class, () -> service.getTrackById(trackIdToDelete));
     }
+
     @Test
     public void deleteTrackFromAllPlaylistsTest() {
-
-        long trackIdToDelete = Util.getResourceToDelete();
-
+        long trackIdToDelete = service.getRandomTrackId();
         service.deleteTrackById(trackIdToDelete);
 
         Response response = playlistService.getAllPlaylists();
@@ -57,7 +52,6 @@ public class DeleteTrackTest {
             List<Map<String, Object>> tracks = (List<Map<String, Object>>) playlist.get("tracks");
             if (tracks != null) {
                 for (Map<String, Object> track : tracks) {
-                    System.out.println("Playlist: "+ playlist.get("id") + "Track ID: " + track.get("id"));
                     assertNotEquals(trackIdToDelete, track.get("id"));
                 }
             }

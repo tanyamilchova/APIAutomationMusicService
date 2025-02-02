@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class UpdatePlaylistAttributesTest extends AbstractPlaylistTest {
 
-    private final PlayList playList =getCreatedPlaylist();
+    private final PlayList playList = getCreatedPlaylist();
     private final PlaylistService service = new PlaylistService();
 
     @Test
@@ -25,8 +25,8 @@ public class UpdatePlaylistAttributesTest extends AbstractPlaylistTest {
         PlayList updatedPlaylist = service.updatePlaylistDetails(newPlaylistId);
 
         assertEquals(userid, updatedPlaylist.getUserId());
-        assertEquals("UpdatedName", updatedPlaylist.getName());
-        assertEquals("UpdatedDescription", updatedPlaylist.getDescription());
+        assertEquals("updated_name", updatedPlaylist.getName());
+        assertEquals("updated_description", updatedPlaylist.getDescription());
         assertEquals(new ArrayList<>(), updatedPlaylist.getTracks());
 
     }
