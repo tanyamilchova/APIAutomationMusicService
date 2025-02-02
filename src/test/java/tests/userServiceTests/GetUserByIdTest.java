@@ -1,24 +1,35 @@
 package tests.userServiceTests;
 
 import com.example.model.User;
-import com.example.util.Util;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import service.UserService;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GetUserByIdTest {
 
+    private  UserService userService;
 
+    private User user;
+    @BeforeEach
+    public void seetup(){
+        userService = new UserService();
+        user = userService.createUser();
+    }
+    @AfterEach
+    public void tearDown(){
+        userService.deleteUserById(user.getId());
+    }
     @Test
     public void getUserByIdTest() {
-        UserService userService = new UserService();
-        long id = Util.getResourceIdFromProperty();
-        User user = userService.getUserById(id);
+        long id = user.getId();
 
 
         assertEquals(id, user.getId());
-        assertEquals("Penelope", user.getFirstName());
-        assertEquals("Torres", user.getLastName());
-        assertEquals("Penelope_Torres@gmx.com", user.getEmail());
+        assertEquals("firstName", user.getFirstName());
+        assertEquals("lastName", user.getLastName());
+        assertEquals("email", user.getEmail());
     }
 }

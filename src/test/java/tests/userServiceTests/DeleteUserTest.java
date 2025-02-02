@@ -1,6 +1,7 @@
 package tests.userServiceTests;
 
 import com.example.model.User;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import service.UserService;
 
@@ -9,22 +10,29 @@ import static org.testng.Assert.assertThrows;
 import static org.testng.AssertJUnit.*;
 
 public class DeleteUserTest {
-    UserService service = new UserService();
+    private  UserService userService;
+    private User user;
+
+    @BeforeEach
+    public void seetup(){
+        userService = new UserService();
+    }
+
     @Test
     public void deleteUserDetailsTest(){
-        User user = service.createUser();
+        user = userService.createUser();
         long id = user.getId();
-        service.deleteUserById(id);
+        userService.deleteUserById(id);
 
-        assertFalse(service.checkIfSuccessfullyDeleted(id));
+        assertFalse(userService.checkIfSuccessfullyDeleted(id));
     }
 
     @Test
     public void deleteNotFoundUserTest() {
-        User createdUser = service.createUser();
+        User createdUser = userService.createUser();
         long userIdToDelete = createdUser.getId();
 
-        service.deleteUserById(userIdToDelete);
-        assertThrows(RuntimeException.class, () -> service.getUserById(userIdToDelete));
+        userService.deleteUserById(userIdToDelete);
+        assertThrows(RuntimeException.class, () -> userService.getUserById(userIdToDelete));
     }
 }

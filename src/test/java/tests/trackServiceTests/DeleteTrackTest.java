@@ -2,6 +2,7 @@ package tests.trackServiceTests;
 
 import com.example.model.Track;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import service.PlaylistService;
 import service.TrackService;
@@ -14,27 +15,27 @@ import static org.testng.Assert.assertThrows;
 import static org.testng.AssertJUnit.*;
 
 public class DeleteTrackTest {
-    TrackService service = new TrackService();
+    TrackService service ;
     PlaylistService playlistService = new PlaylistService();
+    private Track track;
 
-    private long getNewTrackId(TrackService service) {
-        Track track = service.createTrack();
-        return track.getId();
+    @BeforeEach
+    public void seetup(){
+        service = new TrackService();
+        track = service.createTrack();
     }
 
     @Test
     public void deleteTrackDetailsTest(){
-        long id = getNewTrackId(service);
+        long id = track.getId();
 
         service.deleteTrackById(id);
         assertFalse(service.trackExists(id));
     }
 
-
-
     @Test
     public void deleteNotFoundTrackTest() {
-        long trackIdToDelete = getNewTrackId(service);
+        long trackIdToDelete = track.getId();
 
         service.deleteTrackById(trackIdToDelete);
 

@@ -3819,3 +3819,278 @@ com.example.exseption.ResourceException: Resource: class com.example.model.User 
 2025-02-02 18:55:58 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
 2025-02-02 18:55:58 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/users/{id} with PropertyResourceId: com.example.model.User@712cfb63 and AcceptorResource: 2
 2025-02-02 18:55:58 [main] INFO  service.AbstractService - Response received from PUT request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
+2025-02-02 19:03:00 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@5b218417 and AcceptorResource: -1
+2025-02-02 19:03:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":53,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:04:07 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@413d1baf and AcceptorResource: -1
+2025-02-02 19:04:09 [main] INFO  service.AbstractService - Response received from POST request: {"id":54,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:04:09 [main] INFO  service.AbstractService - Checking if resource with ID: 54 exists at /api/tracks/54
+2025-02-02 19:04:09 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 54
+2025-02-02 19:04:09 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":54,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:34 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@273444fe and AcceptorResource: -1
+2025-02-02 19:06:36 [main] INFO  service.AbstractService - Response received from POST request: {"id":55,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:36 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with PropertyResourceId: null and AcceptorResource: 0
+2025-02-02 19:06:36 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Zenith's Serenade of Reflection","artist":"Luminous Symphony","duration":162,"year":1967,"album":"Mystic Rhythms"},{"id":2,"title":"Ocean's Embrace in Moonlight","artist":"Ethereal Harmony","duration":253,"year":2006,"album":"Harmonic Horizons"},{"id":3,"title":"Luminous Serenade of Reflection","artist":"Dream-catcher","duration":322,"year":1963,"album":"Echoes of Eternity"},{"id":4,"title":"Silver Lining's Melodies","artist":"Starstruck Symphony","duration":389,"year":1966,"album":"Starry Night Serenade"},{"id":5,"title":"Dancing Raindrops of Harmony","artist":"Sonic Renegades","duration":130,"year":1997,"album":"Mystic Rhythms"},{"id":6,"title":"Sweet Melodies of Euphoria","artist":"Electric Serenade","duration":286,"year":1973,"album":"Dancing in the Moonlight"},{"id":7,"title":"Ethereal Melodies in Motion","artist":"Dreamweaver","duration":243,"year":1988,"album":"Golden Memories"},{"id":8,"title":"Harmonious Journey of Melodies","artist":"Stellar Pulse","duration":417,"year":1940,"album":"Mystic Rhythms"},{"id":9,"title":"Harmonic Reflections of Joy","artist":"Enchanted Melodies","duration":156,"year":1952,"album":"Echoes of Eternity"},{"id":10,"title":"Whispers of Wonder's Melodies","artist":"Radiant Soul","duration":404,"year":2015,"album":"Moonlit Reflections"},{"id":11,"title":"Autumn Whispers of Wonder","artist":"Sonic Renegades","duration":282,"year":1954,"album":"Mystic Rhythms"},{"id":12,"title":"Melancholic Melodies in Motion","artist":"Nebulous Serenade","duration":264,"year":1970,"album":"Ethereal Dreams"},{"id":13,"title":"Melodies from the Heart's Solitude","artist":"Zephyr Harmony","duration":163,"year":1984,"album":"Moonlit Reflections"},{"id":14,"title":"Halcyon Whispers of Joy","artist":"Radiant Soul","duration":175,"year":1982,"album":"Nostalgic Notes"},{"id":15,"title":"Sunflower Serenade of Harmony","artist":"Tranquil Solace","duration":236,"year":1996,"album":"Starry Night Serenade"},{"id":16,"title":"Sunbeam Melodies of Joy","artist":"Mystic Pulse","duration":180,"year":2019,"album":"Mystic Rhythms"},{"id":17,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":176,"year":1941,"album":"Dancing in the Moonlight"},{"id":18,"title":"Whispering Winds of Melodies","artist":"Silent Serenade","duration":167,"year":2004,"album":"Ocean Serenity"},{"id":19,"title":"Rhythmic Whispers of Wonder","artist":"Radiant Echo","duration":210,"year":1974,"album":"Ethereal Dreams"},{"id":20,"title":"Midnight Harmonies of Wonder","artist":"Whispering Melodies","duration":377,"year":1976,"album":"Melancholic Melodies"},{"id":22,"title":"Melodies of Solitude's Reflection","artist":"Enchanted Melodies","duration":171,"year":1968,"album":"Summer Breeze Melodies"},{"id":23,"title":"Zenith's Serenade of Reflection","artist":"Nebulous Serenade","duration":412,"year":1998,"album":"Fireside Melodies"},{"id":24,"title":"Midnight Harmonies of Wonder","artist":"Radiant Echo","duration":420,"year":1990,"album":"Infinite Symphony"},{"id":25,"title":"Sunbeam Melodies of Joy","artist":"Astral Pulse","duration":407,"year":1981,"album":"Quicksilver Serenade"},{"id":26,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":348,"year":1985,"album":"Silver Lining Songs"},{"id":27,"title":"Sunbeam Melodies of Joy","artist":"Enchanted Melodies","duration":366,"year":2011,"album":"Quicksilver Serenade"},{"id":28,"title":"Harmonic Reflections of Joy","artist":"Serenity's Echo","duration":337,"year":1995,"album":"Golden Memories"},{"id":29,"title":"Nocturnal Whispers of Melodies","artist":"Whiskey Lullaby","duration":125,"year":1992,"album":"Infinite Symphony"},{"id":30,"title":"Shimmering Twilight's Melodies","artist":"Mystic Pulse","duration":310,"year":1968,"album":"Melancholic Melodies"},{"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":32,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"},{"id":42,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":44,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":45,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":46,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":47,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":49,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":50,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":51,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":52,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"},{"id":53,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":55,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}]}
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - All Resources List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 35, 42, 44, 45, 46, 47, 49, 50, 51, 52, 53, 55] 
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Checking if resource with ID: 52 exists at /api/tracks/52
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 52
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":52,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}
+2025-02-02 19:06:37 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@104dc1a2 and AcceptorResource: -1
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from POST request: {"id":56,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Checking if resource with ID: 56 exists at /api/tracks/56
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 56
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":56,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Checking if resource with ID: 56 exists at /api/tracks/56
+2025-02-02 19:06:37 [main] WARN  service.AbstractService - Resource with ID 56 not found (HTTP Status: 404).
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@6cfbbff7 and AcceptorResource: -1
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from POST request: {"id":57,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@61874b9d and AcceptorResource: -1
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from POST request: {"id":58,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Checking if resource with ID: 58 exists at /api/tracks/58
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 58
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":58,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 58
+2025-02-02 19:06:37 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 58 in the system."}
+2025-02-02 19:06:37 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 58
+2025-02-02 19:06:37 [main] ERROR service.PlaylistService - An error occurred while getting  a track with Id : 58 at endpoint: /api/tracks 
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 58 is not found
+	at service.AbstractService.getResourceById(AbstractService.java:160)
+	at service.TrackService.getTrackById(TrackService.java:25)
+	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:52)
+	at org.testng.Assert.expectThrows(Assert.java:2444)
+	at org.testng.Assert.expectThrows(Assert.java:2425)
+	at org.testng.Assert.assertThrows(Assert.java:2391)
+	at tests.trackServiceTests.DeleteTrackTest.deleteNotFoundTrackTest(DeleteTrackTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-02 19:07:21 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@273444fe and AcceptorResource: -1
+2025-02-02 19:07:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":59,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:07:22 [main] INFO  service.AbstractService - Sending GET_ALL request to endpoint: /api/tracks with PropertyResourceId: null and AcceptorResource: 0
+2025-02-02 19:07:22 [main] INFO  service.AbstractService - Response received from GET_ALL request: {"tracks":[{"id":1,"title":"Zenith's Serenade of Reflection","artist":"Luminous Symphony","duration":162,"year":1967,"album":"Mystic Rhythms"},{"id":2,"title":"Ocean's Embrace in Moonlight","artist":"Ethereal Harmony","duration":253,"year":2006,"album":"Harmonic Horizons"},{"id":3,"title":"Luminous Serenade of Reflection","artist":"Dream-catcher","duration":322,"year":1963,"album":"Echoes of Eternity"},{"id":4,"title":"Silver Lining's Melodies","artist":"Starstruck Symphony","duration":389,"year":1966,"album":"Starry Night Serenade"},{"id":5,"title":"Dancing Raindrops of Harmony","artist":"Sonic Renegades","duration":130,"year":1997,"album":"Mystic Rhythms"},{"id":6,"title":"Sweet Melodies of Euphoria","artist":"Electric Serenade","duration":286,"year":1973,"album":"Dancing in the Moonlight"},{"id":7,"title":"Ethereal Melodies in Motion","artist":"Dreamweaver","duration":243,"year":1988,"album":"Golden Memories"},{"id":8,"title":"Harmonious Journey of Melodies","artist":"Stellar Pulse","duration":417,"year":1940,"album":"Mystic Rhythms"},{"id":9,"title":"Harmonic Reflections of Joy","artist":"Enchanted Melodies","duration":156,"year":1952,"album":"Echoes of Eternity"},{"id":10,"title":"Whispers of Wonder's Melodies","artist":"Radiant Soul","duration":404,"year":2015,"album":"Moonlit Reflections"},{"id":11,"title":"Autumn Whispers of Wonder","artist":"Sonic Renegades","duration":282,"year":1954,"album":"Mystic Rhythms"},{"id":12,"title":"Melancholic Melodies in Motion","artist":"Nebulous Serenade","duration":264,"year":1970,"album":"Ethereal Dreams"},{"id":13,"title":"Melodies from the Heart's Solitude","artist":"Zephyr Harmony","duration":163,"year":1984,"album":"Moonlit Reflections"},{"id":14,"title":"Halcyon Whispers of Joy","artist":"Radiant Soul","duration":175,"year":1982,"album":"Nostalgic Notes"},{"id":15,"title":"Sunflower Serenade of Harmony","artist":"Tranquil Solace","duration":236,"year":1996,"album":"Starry Night Serenade"},{"id":16,"title":"Sunbeam Melodies of Joy","artist":"Mystic Pulse","duration":180,"year":2019,"album":"Mystic Rhythms"},{"id":17,"title":"Echoes of Enchantment","artist":"Crystal Visions","duration":176,"year":1941,"album":"Dancing in the Moonlight"},{"id":18,"title":"Whispering Winds of Melodies","artist":"Silent Serenade","duration":167,"year":2004,"album":"Ocean Serenity"},{"id":19,"title":"Rhythmic Whispers of Wonder","artist":"Radiant Echo","duration":210,"year":1974,"album":"Ethereal Dreams"},{"id":20,"title":"Midnight Harmonies of Wonder","artist":"Whispering Melodies","duration":377,"year":1976,"album":"Melancholic Melodies"},{"id":22,"title":"Melodies of Solitude's Reflection","artist":"Enchanted Melodies","duration":171,"year":1968,"album":"Summer Breeze Melodies"},{"id":23,"title":"Zenith's Serenade of Reflection","artist":"Nebulous Serenade","duration":412,"year":1998,"album":"Fireside Melodies"},{"id":24,"title":"Midnight Harmonies of Wonder","artist":"Radiant Echo","duration":420,"year":1990,"album":"Infinite Symphony"},{"id":25,"title":"Sunbeam Melodies of Joy","artist":"Astral Pulse","duration":407,"year":1981,"album":"Quicksilver Serenade"},{"id":26,"title":"Whispers of Tranquil Harmony","artist":"Aetheric Echoes","duration":348,"year":1985,"album":"Silver Lining Songs"},{"id":27,"title":"Sunbeam Melodies of Joy","artist":"Enchanted Melodies","duration":366,"year":2011,"album":"Quicksilver Serenade"},{"id":28,"title":"Harmonic Reflections of Joy","artist":"Serenity's Echo","duration":337,"year":1995,"album":"Golden Memories"},{"id":29,"title":"Nocturnal Whispers of Melodies","artist":"Whiskey Lullaby","duration":125,"year":1992,"album":"Infinite Symphony"},{"id":30,"title":"Shimmering Twilight's Melodies","artist":"Mystic Pulse","duration":310,"year":1968,"album":"Melancholic Melodies"},{"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":32,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":35,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"},{"id":42,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":44,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":45,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":46,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":47,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":49,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":50,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":51,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":53,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":55,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":57,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"},{"id":59,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}]}
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - All Resources List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 35, 42, 44, 45, 46, 47, 49, 50, 51, 53, 55, 57, 59] 
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Checking if resource with ID: 19 exists at /api/tracks/19
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 19
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":19,"title":"Rhythmic Whispers of Wonder","artist":"Radiant Echo","duration":210,"year":1974,"album":"Ethereal Dreams"}
+2025-02-02 19:07:23 [main] INFO  service.PlaylistService - Try to get all playlist
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@6f5bd362 and AcceptorResource: -1
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Response received from POST request: {"id":60,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Checking if resource with ID: 60 exists at /api/tracks/60
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 60
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":60,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Checking if resource with ID: 60 exists at /api/tracks/60
+2025-02-02 19:07:23 [main] WARN  service.AbstractService - Resource with ID 60 not found (HTTP Status: 404).
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@70a898b0 and AcceptorResource: -1
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Response received from POST request: {"id":61,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Checking if resource with ID: 61 exists at /api/tracks/61
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 61
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":61,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 61
+2025-02-02 19:07:23 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no track with ID - 61 in the system."}
+2025-02-02 19:07:23 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/tracks/{id} with resourceId: 61
+2025-02-02 19:07:23 [main] ERROR service.PlaylistService - An error occurred while getting  a track with Id : 61 at endpoint: /api/tracks 
+com.example.exseption.ResourceException: Resource: class com.example.model.Track ID: 61 is not found
+	at service.AbstractService.getResourceById(AbstractService.java:160)
+	at service.TrackService.getTrackById(TrackService.java:25)
+	at tests.trackServiceTests.DeleteTrackTest.lambda$deleteNotFoundTrackTest$0(DeleteTrackTest.java:50)
+	at org.testng.Assert.expectThrows(Assert.java:2444)
+	at org.testng.Assert.expectThrows(Assert.java:2425)
+	at org.testng.Assert.assertThrows(Assert.java:2391)
+	at tests.trackServiceTests.DeleteTrackTest.deleteNotFoundTrackTest(DeleteTrackTest.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-02 19:09:39 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@413d1baf and AcceptorResource: -1
+2025-02-02 19:09:40 [main] INFO  service.AbstractService - Response received from POST request: {"id":62,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:09:40 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 62
+2025-02-02 19:09:40 [main] INFO  service.AbstractService - Response received from GET request: {"id":62,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:09:40 [main] INFO  service.AbstractService - Checking if resource with ID: 62 exists at /api/tracks/62
+2025-02-02 19:09:40 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 62
+2025-02-02 19:09:40 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":62,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:10:42 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@413d1baf and AcceptorResource: -1
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Response received from POST request: {"id":63,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@28da7d11 and AcceptorResource: -1
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Response received from POST request: {"id":64,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Checking if resource with ID: 64 exists at /api/tracks/64
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 64
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Response received from GET request: {"id":64,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/tracks/{id} with PropertyResourceId: com.example.model.Track@2b7962a2 and AcceptorResource: 64
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Response received from PUT request: {"id":64,"title":"newTitle","artist":"newArtist","duration":1,"year":2000,"album":"newAlbum"}
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Checking if resource with ID: 63 exists at /api/tracks/63
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 63
+2025-02-02 19:10:44 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":63,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:14:59 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@16eb3ea3 and AcceptorResource: -1
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Response received from POST request: {"id":65,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@77b919a3 and AcceptorResource: -1
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Response received from POST request: {"id":124,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Checking if resource with ID: 65 exists at /api/tracks/65
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 65
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":65,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Checking if resource with ID: 124 exists at /api/users/124
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 124
+2025-02-02 19:15:00 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":124,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:19:33 [main] ERROR service.AbstractService - Invalid playlistId: 0
+2025-02-02 19:21:16 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@413d1baf and AcceptorResource: -1
+2025-02-02 19:21:18 [main] INFO  service.AbstractService - Response received from POST request: {"id":125,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:21:18 [main] INFO  service.AbstractService - Checking if resource with ID: 125 exists at /api/users/125
+2025-02-02 19:21:18 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 125
+2025-02-02 19:21:18 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":125,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:21:44 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@413d1baf and AcceptorResource: -1
+2025-02-02 19:21:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":126,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:21:45 [main] INFO  service.AbstractService - Checking if resource with ID: 126 exists at /api/users/126
+2025-02-02 19:21:45 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 126
+2025-02-02 19:21:45 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":126,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:21:56 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@413d1baf and AcceptorResource: -1
+2025-02-02 19:21:57 [main] INFO  service.AbstractService - Response received from POST request: {"id":127,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:21:57 [main] INFO  service.AbstractService - Checking if resource with ID: 127 exists at /api/users/127
+2025-02-02 19:21:57 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 127
+2025-02-02 19:21:57 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":127,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:22:16 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@413d1baf and AcceptorResource: -1
+2025-02-02 19:22:17 [main] INFO  service.AbstractService - Response received from POST request: {"id":128,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:22:17 [main] INFO  service.AbstractService - Checking if resource with ID: 128 exists at /api/users/128
+2025-02-02 19:22:18 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 128
+2025-02-02 19:22:18 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":128,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:22:55 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@413d1baf and AcceptorResource: -1
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Response received from POST request: {"id":129,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Checking if resource with ID: 2 exists at /api/users/2
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 2
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/users/{id} with PropertyResourceId: com.example.model.User@68b9834c and AcceptorResource: 2
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Response received from PUT request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Checking if resource with ID: 129 exists at /api/users/129
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 129
+2025-02-02 19:22:56 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":129,"firstName":"firstName","lastName":"lastName","email":"email"}
