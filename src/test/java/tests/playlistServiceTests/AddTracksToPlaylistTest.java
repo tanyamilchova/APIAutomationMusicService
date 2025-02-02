@@ -4,26 +4,26 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import service.PlaylistService;
 
+
 import static org.testng.AssertJUnit.*;
 
 public class AddTracksToPlaylistTest extends AbstractPlaylistTest {
 
-    private final PlaylistService service = new PlaylistService();
-
+    private final PlaylistService playlistService = new PlaylistService();
 
     @Test
     public void addTracksToPlaylistTest(){
 
-       Response response = service.addTracksToPlaylist(idResource, track);
+       Response response = playlistService.addTracksToPlaylist(idResource, track);
        long lastAddedTrackId = getLastAddedTrackId(response);
-       long numOfTrack = service.getNumberOfResource(idResource, lastAddedTrackId, idResourceStr);
+       long numOfTrack = playlistService.getNumberOfResource(idResource, lastAddedTrackId, idResourceStr);
 
 
        assertEquals(200, response.getStatusCode());
-       assertEquals(numOfTrack, service.getNumberOfResource(idResource, track, idResourceStr));
+       assertEquals(numOfTrack, playlistService.getNumberOfResource(idResource, track, idResourceStr));
 
-       service.addTracksToPlaylist(idResource, track);
+       playlistService.addTracksToPlaylist(idResource, track);
        numOfTrack+= 1;
-       assertEquals(numOfTrack, service.getNumberOfResource(idResource, track, idResourceStr));
-    }
+       assertEquals(numOfTrack, playlistService.getNumberOfResource(idResource, track, idResourceStr));
+        }
 }

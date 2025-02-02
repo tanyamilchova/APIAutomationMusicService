@@ -19,8 +19,15 @@ public class UserService extends AbstractService{
     String updated_firstName = TestDataReader.getTestData("resource_updated_firstName");
     String updated_lastName = TestDataReader.getTestData("resource_updated_lastName");
     String updated_email = TestDataReader.getTestData("resource_updated_email");
-    public User getUserById(long id) {
-        return getResourceById(User.class, endpointById, id);
+
+    public User getUserById(long userId) {
+        checkIfZeroOrNegative(userId);
+        try{
+        return getResourceById(User.class, endpointById, userId);
+        } catch (Exception e) {
+            logger.error("Failed to retrieve user with ID: {} from endpoint: {}", userId, endpointById, e);
+            throw new ResourceNotFoundException("User with ID: " + userId + " not found.");
+        }
     }
 
     public User createUser() {

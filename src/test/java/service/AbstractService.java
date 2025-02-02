@@ -1,6 +1,7 @@
 package service;
 
 import com.example.exseption.ResourceException;
+import com.example.util.URLCreator;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.slf4j.Logger;
@@ -50,7 +51,8 @@ public class AbstractService {
     public <T> ResourceResponse<T> makeRequest(Class<T> resourceClass, T resource, String endpoint, long resourceId, String requestType) {
 
         try {
-            logger.info("Sending " + requestType +" request to endpoint: {} with playlistId: {} and resource: {}", endpoint, resourceId, resource);
+//            logger.info("Sending " + requestType +" request to endpoint: {} with playlistId: {} and resource: {}", endpoint, resourceId, resource);
+            logger.info("Sending {} request to endpoint: {} with PropertyResourceId: {} and AcceptorResource: {}",requestType, endpoint, resource,resourceId);
             T updatedResource;
             Response response;
             switch (requestType) {
@@ -225,8 +227,8 @@ public class AbstractService {
             logger.error("An error occurred while retrieving resource number from endpoint: {}", endpoint, e);
             throw new RuntimeException("An error occurred while retrieving resource number: " + e.getMessage(), e);
         }
-    }
 
+    }
 
     private Map<Long, Long> putTracksIdsIntoMap(List<Integer> playlistIds) {
         logger.info("Size of playlist IDs: {}", playlistIds.size());
@@ -274,10 +276,10 @@ public class AbstractService {
         return response.statusCode() < 200 || response.statusCode() > 299;
     }
 
-    private void checkIfZeroOrNegative(long resourceId) {
+    protected void checkIfZeroOrNegative(long resourceId) {
         if (resourceId <= 0) {
             logger.error("Invalid playlistId: {}", resourceId);
-            throw new IllegalArgumentException("Playlist ID must be greater than 0");
+            throw new IllegalArgumentException("Resource ID must be greater than 0");
         }
     }
 

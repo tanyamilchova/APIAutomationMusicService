@@ -54,7 +54,7 @@ public class PlaylistService extends AbstractService{
 
         return createResource(playList, endpoint).getResource();
     }
-    public Response createPlaylistWrongUser(int userId) {
+    public Response createPlaylistWrongUser(long userId) {
 
         PlayList playList = createPlaylist(userId);
         return createResource(playList, endpoint).getRawResponse();
@@ -66,12 +66,17 @@ public class PlaylistService extends AbstractService{
         }
         try{
         logger.info("Sending PUT request to endpoint: {} to update a playlist details with ID: {}",endpointById, playlistId);
-            PlayList playList = new PlayList();
-            playList.setUserId(Util.getResourceIdFromProperty());
+//            PlayList playList = new PlayList();
+            PlayList playList = getPlaylistById(playlistId);
+//            playList.setUserId(Util.getResourceIdFromProperty());
+//            playList.setUserId(playList.getUserId());
+
             playList.setName(updatedName);
             playList.setDescription(updatedDescription);
             playList.setPublic(true);
-
+            ///////////
+            playList.setTracks(null);
+/////////////////
             return updateResource(playList, endpointById, playlistId).getResource();
         }catch (Exception e) {
             logger.error("An error occurred while updating  a playlist details of with Id : {} at endpoint: {}",  playlistId, endpoint, e);

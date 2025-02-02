@@ -19,21 +19,22 @@ public class AbstractPlaylistTest {
     protected long idResource = Util.getResourceIdFromProperty();
     protected long track = Util.getResourceIdFromProperty();
     protected String idResourceStr = TestDataReader.getTestData("response.list.path_id");
+    public String tracksResourceStr = TestDataReader.getTestData("response.tracks");
 
-    protected  PlayList getCreatedPlaylist(){
+
+    protected  PlayList getCreatedPlaylist(long userId){
         PlaylistService service = new PlaylistService();
-        long userid = Util.getResourceIdFromProperty();
-        logger.info("Playlist creation for user: {}", userid);
-        return service.createPlaylist(userid);
+        logger.info("Playlist creation for user: {}", userId);
+        return service.createPlaylist(userId);
     }
 
-    public static long getLastAddedTrackId(Response response) {
+    public  long getLastAddedTrackId(Response response) {
         try {
             if (response == null) {
                 throw new IllegalArgumentException("Response cannot be null");
             }
 
-            List<Map<String, Object>> allTracks = response.jsonPath().getList("tracks");
+            List<Map<String, Object>> allTracks = response.jsonPath().getList(tracksResourceStr);
 
             if (allTracks == null || allTracks.isEmpty()) {
                 throw new IllegalStateException("No tracks found in the response");

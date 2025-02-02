@@ -1,10 +1,11 @@
 package tests.playlistServiceTests;
 
 import com.example.model.PlayList;
-import com.example.util.Util;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import service.PlaylistService;
+import service.UserService;
 
 import java.util.ArrayList;
 
@@ -13,18 +14,27 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class UpdatePlaylistAttributesTest extends AbstractPlaylistTest {
 
-    private final PlayList playList = getCreatedPlaylist();
-    private final PlaylistService service = new PlaylistService();
+    private  PlaylistService playlistService;
+    private  PlayList testPlayList;
 
+    private UserService userService;
+    private long userId;
+
+    @BeforeEach
+    public void setup(){
+        userService = new UserService();
+        playlistService = new PlaylistService();
+
+        userId = userService.createUser().getId();
+        testPlayList = getCreatedPlaylist(userId);
+    }
     @Test
     public void updatePlaylistAttributesTest() {
+        long newPlaylistId = testPlayList.getId();
 
-        long userid = Util.getResourceIdFromProperty();
-        long newPlaylistId = playList.getId();
+        PlayList updatedPlaylist = playlistService.updatePlaylistDetails(newPlaylistId);
 
-        PlayList updatedPlaylist = service.updatePlaylistDetails(newPlaylistId);
-
-        assertEquals(userid, updatedPlaylist.getUserId());
+        assertEquals(userId, updatedPlaylist.getUserId());
         assertEquals("updated_name", updatedPlaylist.getName());
         assertEquals("updated_description", updatedPlaylist.getDescription());
         assertEquals(new ArrayList<>(), updatedPlaylist.getTracks());
@@ -32,12 +42,12 @@ public class UpdatePlaylistAttributesTest extends AbstractPlaylistTest {
     }
     @Test
     public void updatePlaylistUserIdTest() {
-        long newPlaylistId = playList.getId();
-        Response response = service.updatePlaylistUserId(newPlaylistId);
+        long newPlaylistId = testPlayList.getId();
+        Response response = playlistService.updatePlaylistUserId(newPlaylistId);
 
         assertEquals(400, response.getStatusCode());
 
         String errorMessage = response.jsonPath().getString("errorMessage");
-        assertEquals("Unable to change the owner of playlist. Original ownerID - 1.", errorMessage);
+        assertEquals("Unable to change the owner of playlist. Original ownerID - " + userId + ".", errorMessage);
     }
 }

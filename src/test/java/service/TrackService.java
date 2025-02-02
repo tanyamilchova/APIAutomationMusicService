@@ -20,6 +20,7 @@ public class TrackService extends AbstractService{
     private final String album = TestDataReader.getTestData("response.tracks_album");
 
     public Track getTrackById(long trackId) {
+        checkIfZeroOrNegative(trackId);
         try {
             return getResourceById( Track.class, endpointById, trackId);
         } catch (Exception e) {
