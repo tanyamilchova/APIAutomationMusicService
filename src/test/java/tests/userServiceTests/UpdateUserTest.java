@@ -13,7 +13,7 @@ public class UpdateUserTest {
 
     private User user;
     @BeforeEach
-    public void seetup(){
+    public void setup(){
         userService = new UserService();
         user = userService.createUser();
     }
