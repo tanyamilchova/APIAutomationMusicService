@@ -4,7 +4,6 @@ import com.example.exseption.ResourceNotFoundException;
 import com.example.model.PlayList;
 import com.example.util.TestDataReader;
 import com.example.util.URLCreator;
-import com.example.util.Util;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +18,6 @@ public class PlaylistService extends AbstractService{
     private final String endpoint = URLCreator.playlistGetAllCreateURL();
     private final String endpointGetTracks = URLCreator.playlistGetTracksURL();
     private final String endpointById = URLCreator.playlistGetPutDeleteByIdURL();
-    private final String endpointTrackById = URLCreator.trackGetPutDeleteByIdURL();
     private final String endpointAddTrack = URLCreator.playlistAddTrackURL();
     private final String endpointDeleteTrack = URLCreator.playlistRemoveTrackURL();
 
@@ -66,17 +64,12 @@ public class PlaylistService extends AbstractService{
         }
         try{
         logger.info("Sending PUT request to endpoint: {} to update a playlist details with ID: {}",endpointById, playlistId);
-//            PlayList playList = new PlayList();
             PlayList playList = getPlaylistById(playlistId);
-//            playList.setUserId(Util.getResourceIdFromProperty());
-//            playList.setUserId(playList.getUserId());
 
             playList.setName(updatedName);
             playList.setDescription(updatedDescription);
             playList.setPublic(true);
-            ///////////
             playList.setTracks(null);
-/////////////////
             return updateResource(playList, endpointById, playlistId).getResource();
         }catch (Exception e) {
             logger.error("An error occurred while updating  a playlist details of with Id : {} at endpoint: {}",  playlistId, endpoint, e);
@@ -164,7 +157,6 @@ public class PlaylistService extends AbstractService{
 
 
     public boolean playlistIsPresent(long playlistId) {
-        String listPath = TestDataReader.getTestData("response.list_playlists_id");
         logger.info("Checking ifPresent playlist with Id: {} to endpoint: {}",playlistId, endpoint);
         return super.isPresentResource(endpoint, playlistId);
     }

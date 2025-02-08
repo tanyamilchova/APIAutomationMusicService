@@ -1,7 +1,6 @@
 package service;
 
 import com.example.exseption.ResourceException;
-import com.example.util.URLCreator;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.slf4j.Logger;
@@ -31,8 +30,8 @@ public class AbstractService {
                         .pathParam("id", resourceId)
                         .when()
                         .get(endpoint)
-                        .then()
-                        .log().body();
+                        .then();
+
 
                 logger.info("Successfully fetched resource with ID: {}", resourceId);
 
@@ -51,7 +50,6 @@ public class AbstractService {
     public <T> ResourceResponse<T> makeRequest(Class<T> resourceClass, T resource, String endpoint, long resourceId, String requestType) {
 
         try {
-//            logger.info("Sending " + requestType +" request to endpoint: {} with playlistId: {} and resource: {}", endpoint, resourceId, resource);
             logger.info("Sending {} request to endpoint: {} with PropertyResourceId: {} and AcceptorResource: {}",requestType, endpoint, resource,resourceId);
             T updatedResource;
             Response response;
@@ -210,7 +208,6 @@ public class AbstractService {
             }
 
             List<Integer> playlistIds = response.jsonPath().getList(listData);
-            logger.info("Playlist IDs retrieved: {}", playlistIds);
 
             Map<Long, Long> tracksMap = putTracksIdsIntoMap(playlistIds);
 
@@ -302,7 +299,6 @@ public class AbstractService {
         ResourceResponse<T> response = makeRequest(resourseClass, null, endpoint, 0,getAllRequest );
 
         List<Integer> allResources = response.getAllResoursesId("tracks.id");
-        logger.info("All Resources List: {} ",allResources);
         return allResources;
     }
 
