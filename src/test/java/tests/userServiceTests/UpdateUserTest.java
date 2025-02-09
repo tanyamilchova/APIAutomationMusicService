@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import service.UserService;
 
 public class UpdateUserTest {
-
     private  UserService userService;
 
     private User user;

@@ -17,7 +17,7 @@ public class CreateAPlayListTest extends AbstractPlaylistTest {
     private  UserService userService;
     private long userId;
     @BeforeMethod
-    public void seetup(){
+    public void setup(){
         userService = new UserService() ;
         userId = userService.createUser().getId();
         playList = getCreatedPlaylist(userId);
