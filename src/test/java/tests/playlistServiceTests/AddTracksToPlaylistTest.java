@@ -1,7 +1,7 @@
 package tests.playlistServiceTests;
 
 import io.restassured.response.Response;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import service.PlaylistService;
 
 

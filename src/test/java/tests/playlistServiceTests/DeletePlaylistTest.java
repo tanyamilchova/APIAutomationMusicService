@@ -1,13 +1,13 @@
 package tests.playlistServiceTests;
 
 import com.example.model.PlayList;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import service.PlaylistService;
 import service.UserService;
 
 import static org.testng.Assert.assertThrows;
-import static org.testng.AssertJUnit.*;
+import static org.testng.AssertJUnit.assertFalse;
 
 public class DeletePlaylistTest extends AbstractPlaylistTest{
     PlaylistService service = new PlaylistService();
@@ -15,7 +15,7 @@ public class DeletePlaylistTest extends AbstractPlaylistTest{
     private UserService userService;
     private long userId;
 
-    @BeforeEach
+    @BeforeMethod
     public void setup(){
         userService = new UserService() ;
         userId = userService.createUser().getId();

@@ -2,11 +2,10 @@ package tests.playlistServiceTests;
 
 import com.example.model.Track;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import service.PlaylistService;
 import service.TrackService;
-import service.UserService;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -15,7 +14,7 @@ public class DeleteTrackFromPlaylist extends AbstractPlaylistTest {
     private final TrackService trackService = new TrackService();
     Track newTrack ;
 
-    @BeforeEach
+    @BeforeMethod
     public void setup(){
         newTrack = trackService.createTrack();
     }

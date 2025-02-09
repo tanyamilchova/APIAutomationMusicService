@@ -1,9 +1,9 @@
 package tests.trackServiceTests;
 
 import com.example.model.Track;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import service.TrackService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CreateTrackTest {
    private  TrackService service = new TrackService();
    private Track track;
-    @BeforeEach
+    @BeforeMethod
     public void seetup(){
         service = new TrackService();
         track = service.createTrack();
     }
-    @AfterEach
+    @AfterMethod
     public void tearDown(){
        service.deleteTrackById(track.getId());
     }

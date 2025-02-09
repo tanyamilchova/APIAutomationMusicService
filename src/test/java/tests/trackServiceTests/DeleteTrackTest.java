@@ -2,8 +2,8 @@ package tests.trackServiceTests;
 
 import com.example.model.Track;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import service.PlaylistService;
 import service.TrackService;
 
@@ -12,14 +12,14 @@ import java.util.Map;
 
 import static org.testng.Assert.assertNotEquals;
 import static org.testng.Assert.assertThrows;
-import static org.testng.AssertJUnit.*;
+import static org.testng.AssertJUnit.assertFalse;
 
 public class DeleteTrackTest {
     TrackService service ;
     PlaylistService playlistService = new PlaylistService();
     private Track track;
 
-    @BeforeEach
+    @BeforeMethod
     public void seetup(){
         service = new TrackService();
         track = service.createTrack();

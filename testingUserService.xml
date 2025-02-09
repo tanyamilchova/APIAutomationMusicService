@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="tests.userServiceTests">
+    <test name="Run userServiceTests">
+        <classes>
+            <class name="tests.userServiceTests.CreateUserTest">
+                <methods>
+                    <include name="createUserTest"/>
+                </methods>
+            </class>
+            <class name="tests.userServiceTests.DeleteUserTest">
+                <methods>
+                    <include name="deleteUserDetailsTest"/>
+                </methods>
+                <methods>
+                    <include name="deleteNotFoundUserTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.userServiceTests.GetUserByIdTest">
+                <methods>
+                    <include name="getUserByIdTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.userServiceTests.UpdateUserTest">
+                <methods>
+                    <include name="updateUserDetailsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
