@@ -1,22 +1,135 @@
-2025-02-09 15:22:43 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
+2025-02-10 10:46:49 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\src\test\resources\testingUserService.xml
 
-2025-02-09 15:42:42 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 15:43:28 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 15:46:50 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 15:46:50 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 15:46:51 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 15:46:51 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 15:46:51 [main] ERROR t.p.AbstractPlaylistTest - Invalid state encountered while retrieving the last added track ID
-java.lang.IllegalStateException: No tracks found in the response
-	at tests.playlistServiceTests.AbstractPlaylistTest.getLastAddedTrackId(AbstractPlaylistTest.java:40)
-	at tests.playlistServiceTests.AddTracksToPlaylistTest.addTracksToPlaylistTest(AddTracksToPlaylistTest.java:18)
+2025-02-10 10:46:49 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@4ee203eb and AcceptorResource: -1
+2025-02-10 10:46:50 [main] ERROR service.AbstractService - Failed to make request to Endpoint: /api/tracks Resource: com.example.model.Track@4ee203eb
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.TrackService.createTrack(TrackService.java:41)
+	at tests.userServiceTests.CreateUserTest.seetup(CreateUserTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2025-02-10 10:46:50 [main] ERROR service.PlaylistService - An error occurred while creating  new track at endpoint: /api/tracks
+java.lang.RuntimeException: Failed to create resource: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at service.AbstractService.makeRequest(AbstractService.java:90)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.TrackService.createTrack(TrackService.java:41)
+	at tests.userServiceTests.CreateUserTest.seetup(CreateUserTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	... 34 common frames omitted
+2025-02-10 10:46:50 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@6573d2f7 and AcceptorResource: -1
+2025-02-10 10:46:50 [main] ERROR service.AbstractService - Failed to make request to Endpoint: /api/users Resource: com.example.model.User@6573d2f7
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.UserService.createUser(UserService.java:40)
+	at tests.userServiceTests.DeleteUserTest.deleteNotFoundUserTest(DeleteUserTest.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -44,103 +157,281 @@ java.lang.IllegalStateException: No tracks found in the response
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-2025-02-09 15:46:51 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@713ec32d and AcceptorResource: -1
-2025-02-09 15:46:51 [main] INFO  service.AbstractService - Response received from POST request: {"timestamp":"2025-02-09T13:46:51.600+00:00","status":404,"error":"Not Found","path":"/api/playlists"}
-2025-02-09 15:46:51 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@1b90fee4 and AcceptorResource: -1
-2025-02-09 15:46:51 [main] INFO  service.AbstractService - Response received from POST request: {"timestamp":"2025-02-09T13:46:51.623+00:00","status":404,"error":"Not Found","path":"/api/playlists"}
-2025-02-09 17:40:48 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\User\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
+2025-02-10 10:46:50 [main] ERROR service.UserService - An error occurred while creating  new user at endpoint: /api/users
+java.lang.RuntimeException: Failed to create resource: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at service.AbstractService.makeRequest(AbstractService.java:90)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.UserService.createUser(UserService.java:40)
+	at tests.userServiceTests.DeleteUserTest.deleteNotFoundUserTest(DeleteUserTest.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	... 30 common frames omitted
+2025-02-10 10:46:50 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@2a369e14 and AcceptorResource: -1
+2025-02-10 10:46:50 [main] ERROR service.AbstractService - Failed to make request to Endpoint: /api/users Resource: com.example.model.User@2a369e14
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.UserService.createUser(UserService.java:40)
+	at tests.userServiceTests.GetUserByIdTest.seetup(GetUserByIdTest.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2025-02-10 10:46:50 [main] ERROR service.UserService - An error occurred while creating  new user at endpoint: /api/users
+java.lang.RuntimeException: Failed to create resource: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at service.AbstractService.makeRequest(AbstractService.java:90)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.UserService.createUser(UserService.java:40)
+	at tests.userServiceTests.GetUserByIdTest.seetup(GetUserByIdTest.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	... 34 common frames omitted
+2025-02-10 10:46:50 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@74ea46e2 and AcceptorResource: -1
+2025-02-10 10:46:50 [main] ERROR service.AbstractService - Failed to make request to Endpoint: /api/users Resource: com.example.model.User@74ea46e2
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.UserService.createUser(UserService.java:40)
+	at tests.userServiceTests.UpdateUserTest.setup(UpdateUserTest.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2025-02-10 10:46:50 [main] ERROR service.UserService - An error occurred while creating  new user at endpoint: /api/users
+java.lang.RuntimeException: Failed to create resource: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at service.AbstractService.makeRequest(AbstractService.java:90)
+	at service.AbstractService.createResource(AbstractService.java:138)
+	at service.UserService.createUser(UserService.java:40)
+	at tests.userServiceTests.UpdateUserTest.setup(UpdateUserTest.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=iso-8859-1'.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:95)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at service.AbstractService.makeRequest(AbstractService.java:59)
+	... 34 common frames omitted
+2025-02-10 10:50:12 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\src\test\resources\testingUserService.xml
 
-2025-02-09 17:40:48 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:40:50 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:40:50 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:40:51 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Size of playlist IDs: 22
-2025-02-09 17:40:51 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Size of playlist IDs: 22
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:40:51 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:40:51 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:40:51 [main] INFO  service.AbstractService - Size of playlist IDs: 23
-2025-02-09 17:41:12 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 17:41:12 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:41:13 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:41:13 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:41:14 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Size of playlist IDs: 24
-2025-02-09 17:41:14 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Size of playlist IDs: 24
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:41:14 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:41:14 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Size of playlist IDs: 25
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@4dd90166 and AcceptorResource: -1
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@707e4fe4 and AcceptorResource: -1
-2025-02-09 17:41:14 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
-2025-02-09 17:41:14 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:41:14 [main] ERROR service.AbstractService - Invalid playlistId: -1
-2025-02-09 17:45:19 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 17:47:43 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 17:47:55 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\User\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
-2025-02-09 17:48:20 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\User\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
-2025-02-09 17:49:03 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\User\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
-2025-02-09 17:50:06 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\User\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
-2025-02-09 17:50:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@51891008 and AcceptorResource: -1
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Response received from POST request: {"id":52,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@1981d861 and AcceptorResource: -1
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Response received from POST request: {"id":64,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Checking if resource with ID: 52 exists at /api/tracks/52
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 52
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":52,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Checking if resource with ID: 64 exists at /api/users/64
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 64
-2025-02-09 17:50:07 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":64,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:05 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 17:58:05 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@1df8da7a and AcceptorResource: -1
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":53,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@53b7ce6 and AcceptorResource: -1
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":65,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Checking if resource with ID: 53 exists at /api/tracks/53
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 53
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":53,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Checking if resource with ID: 65 exists at /api/users/65
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 65
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":65,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@6e4c0d8c and AcceptorResource: -1
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":66,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Checking if resource with ID: 66 exists at /api/users/66
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 66
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":66,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 66
-2025-02-09 17:58:06 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 66 in the system."}
-2025-02-09 17:58:06 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 66
-2025-02-09 17:58:06 [main] ERROR service.UserService - Failed to retrieve user with ID: 66 from endpoint: /api/users/{id}
-com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 66 is not found
+2025-02-10 10:50:12 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@465232e9 and AcceptorResource: -1
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from POST request: {"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@97d0c06 and AcceptorResource: -1
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from POST request: {"id":31,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Checking if resource with ID: 31 exists at /api/tracks/31
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 31
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":31,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Checking if resource with ID: 31 exists at /api/users/31
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 31
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":31,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@625dfff3 and AcceptorResource: -1
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from POST request: {"id":32,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Checking if resource with ID: 32 exists at /api/users/32
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 32
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":32,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 32
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 32 in the system."}
+2025-02-10 10:50:13 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 32
+2025-02-10 10:50:13 [main] ERROR service.UserService - Failed to retrieve user with ID: 32 from endpoint: /api/users/{id}
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 32 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:158)
 	at service.UserService.getUserById(UserService.java:26)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:35)
@@ -175,106 +466,44 @@ com.example.exseption.ResourceException: Resource: class com.example.model.User 
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-2025-02-09 17:58:20 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@aaa0f76 and AcceptorResource: -1
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from POST request: {"id":33,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Checking if resource with ID: 33 exists at /api/users/33
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 33
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":33,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@11900483 and AcceptorResource: -1
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from POST request: {"id":34,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Checking if resource with ID: 2 exists at /api/users/2
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 2
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"James","lastName":"Jackson","email":"James_Jackson@gmail.com"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/users/{id} with PropertyResourceId: com.example.model.User@65f651eb and AcceptorResource: 2
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from PUT request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Checking if resource with ID: 34 exists at /api/users/34
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 34
+2025-02-10 10:50:13 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":34,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:10 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\src\test\resources\testingUserService.xml
 
-2025-02-09 17:58:20 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:21 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:21 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Size of playlist IDs: 26
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Size of playlist IDs: 26
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Size of playlist IDs: 27
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@57e388c3 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":67,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 67
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@5a1f778 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":22,"name":"name","description":"description","isPublic":true,"userId":67,"tracks":[]}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@6adc5b9c and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@6b1b19cf and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@2a2dc0a and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":68,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 68
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@6003ad65 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":23,"name":"name","description":"description","isPublic":true,"userId":68,"tracks":[]}
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 23 to endpoint: /api/playlists
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Checking if resource with ID: 23 exists at /api/playlists/23
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists/{id} to delete a playlist with ID: 23
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 23
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":23,"name":"name","description":"description","isPublic":true,"userId":68,"tracks":[]}
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 23
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 23 in the system."}
-2025-02-09 17:58:22 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 23
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@3a4aadf8 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":54,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:58:22 [main] INFO  t.p.AbstractPlaylistTest - New track with id: 54 created
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 54 from playlist Id: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 54 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Size of playlist IDs: 28
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 54 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Size of playlist IDs: 28
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists to delete track with ID: 54 from playlist Id: 1
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 54 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Size of playlist IDs: 27
-2025-02-09 17:58:22 [main] ERROR service.AbstractService - No resource IDs found in the response.
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@2ba1209b and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":69,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 69
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@7d8cf9ac and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":24,"name":"name","description":"description","isPublic":true,"userId":69,"tracks":[]}
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:58:22 [main] ERROR service.AbstractService - Invalid playlistId: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@5190010f and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":70,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 70
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@18d11527 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":25,"name":"name","description":"description","isPublic":true,"userId":70,"tracks":[]}
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 25 to endpoint: /api/playlists
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Checking if resource with ID: 25 exists at /api/playlists/25
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Sending PUT request to endpoint: /api/playlists/{id} to update a User of playlist with ID: 25
-2025-02-09 17:58:22 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 25
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from GET request: {"id":25,"name":"name","description":"description","isPublic":true,"userId":70,"tracks":[]}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with PropertyResourceId: com.example.model.PlayList@45e617c4 and AcceptorResource: 25
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from PUT request: {"statusCode":400,"statusMessage":"Bad Request","errorMessage":"Unable to change the owner of playlist. Original ownerID - 70."}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@800d065 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":55,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@5a0e0886 and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":71,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Checking if resource with ID: 55 exists at /api/tracks/55
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 55
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":55,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Checking if resource with ID: 71 exists at /api/users/71
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 71
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":71,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@1fecfaea and AcceptorResource: -1
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from POST request: {"id":72,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Checking if resource with ID: 72 exists at /api/users/72
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 72
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":72,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 72
-2025-02-09 17:58:22 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 72 in the system."}
-2025-02-09 17:58:22 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 72
-2025-02-09 17:58:22 [main] ERROR service.UserService - Failed to retrieve user with ID: 72 from endpoint: /api/users/{id}
-com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 72 is not found
+2025-02-10 10:52:10 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@6e2aa843 and AcceptorResource: -1
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from POST request: {"id":32,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@36480b2d and AcceptorResource: -1
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from POST request: {"id":35,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Checking if resource with ID: 32 exists at /api/tracks/32
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 32
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":32,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Checking if resource with ID: 35 exists at /api/users/35
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 35
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":35,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@3e3315d9 and AcceptorResource: -1
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from POST request: {"id":36,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Checking if resource with ID: 36 exists at /api/users/36
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 36
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":36,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 36
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 36 in the system."}
+2025-02-10 10:52:11 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 36
+2025-02-10 10:52:11 [main] ERROR service.UserService - Failed to retrieve user with ID: 36 from endpoint: /api/users/{id}
+com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 36 is not found
 	at service.AbstractService.getResourceById(AbstractService.java:158)
 	at service.UserService.getUserById(UserService.java:26)
 	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:35)
@@ -309,269 +538,98 @@ com.example.exseption.ResourceException: Resource: class com.example.model.User 
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-2025-02-09 17:58:40 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@60e9c3a5 and AcceptorResource: -1
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from POST request: {"id":37,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Checking if resource with ID: 37 exists at /api/users/37
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 37
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":37,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@43d9f1a2 and AcceptorResource: -1
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from POST request: {"id":38,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Checking if resource with ID: 2 exists at /api/users/2
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 2
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/users/{id} with PropertyResourceId: com.example.model.User@2c88a3e8 and AcceptorResource: 2
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from PUT request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Checking if resource with ID: 38 exists at /api/users/38
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 38
+2025-02-10 10:52:11 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":38,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:53:43 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\src\test\resources\testngPlaylistService.xml
 
-2025-02-09 17:58:40 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:40 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:40 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Size of playlist IDs: 28
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Size of playlist IDs: 28
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Size of playlist IDs: 29
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@2ed71727 and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"id":73,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:41 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 73
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@4b515eab and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"id":26,"name":"name","description":"description","isPublic":true,"userId":73,"tracks":[]}
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@6418e39e and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@1095d23a and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@3c952a33 and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"id":74,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:41 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 74
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@14168e1 and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"id":27,"name":"name","description":"description","isPublic":true,"userId":74,"tracks":[]}
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 27 to endpoint: /api/playlists
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Checking if resource with ID: 27 exists at /api/playlists/27
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists/{id} to delete a playlist with ID: 27
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 27
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":27,"name":"name","description":"description","isPublic":true,"userId":74,"tracks":[]}
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 27
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 27 in the system."}
-2025-02-09 17:58:41 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 27
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@24043ec5 and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"id":56,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 17:58:41 [main] INFO  t.p.AbstractPlaylistTest - New track with id: 56 created
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 56 from playlist Id: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 56 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Size of playlist IDs: 30
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 56 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Size of playlist IDs: 30
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists to delete track with ID: 56 from playlist Id: 1
-2025-02-09 17:58:41 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 56 to endpoint: /api/playlists from playlist with ID: 1  
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Size of playlist IDs: 29
-2025-02-09 17:58:41 [main] ERROR service.AbstractService - No resource IDs found in the response.
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@5af5d76f and AcceptorResource: -1
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Response received from POST request: {"id":75,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:41 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 75
-2025-02-09 17:58:41 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@5d318e91 and AcceptorResource: -1
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Response received from POST request: {"id":28,"name":"name","description":"description","isPublic":true,"userId":75,"tracks":[]}
-2025-02-09 17:58:42 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:58:42 [main] ERROR service.AbstractService - Invalid playlistId: -1
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@58fd1214 and AcceptorResource: -1
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Response received from POST request: {"id":76,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 17:58:42 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 76
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@3a7b2e2 and AcceptorResource: -1
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Response received from POST request: {"id":29,"name":"name","description":"description","isPublic":true,"userId":76,"tracks":[]}
-2025-02-09 17:58:42 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 29 to endpoint: /api/playlists
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Checking if resource with ID: 29 exists at /api/playlists/29
-2025-02-09 17:58:42 [main] INFO  service.PlaylistService - Sending PUT request to endpoint: /api/playlists/{id} to update a User of playlist with ID: 29
-2025-02-09 17:58:42 [main] INFO  service.PlaylistService - Try to get playlist by Id
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 29
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Response received from GET request: {"id":29,"name":"name","description":"description","isPublic":true,"userId":76,"tracks":[]}
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with PropertyResourceId: com.example.model.PlayList@1e54a6b1 and AcceptorResource: 29
-2025-02-09 17:58:42 [main] INFO  service.AbstractService - Response received from PUT request: {"statusCode":400,"statusMessage":"Bad Request","errorMessage":"Unable to change the owner of playlist. Original ownerID - 76."}
-2025-02-09 18:06:00 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testng.xml
-
-2025-02-09 18:06:00 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@565f390 and AcceptorResource: -1
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":57,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@7d44a19 and AcceptorResource: -1
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":77,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Checking if resource with ID: 57 exists at /api/tracks/57
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 57
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":57,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Checking if resource with ID: 77 exists at /api/users/77
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 77
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":77,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@3743539f and AcceptorResource: -1
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from POST request: {"id":78,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Checking if resource with ID: 78 exists at /api/users/78
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 78
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":78,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 78
-2025-02-09 18:06:01 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 78 in the system."}
-2025-02-09 18:06:01 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 78
-2025-02-09 18:06:01 [main] ERROR service.UserService - Failed to retrieve user with ID: 78 from endpoint: /api/users/{id}
-com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 78 is not found
-	at service.AbstractService.getResourceById(AbstractService.java:158)
-	at service.UserService.getUserById(UserService.java:26)
-	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:35)
-	at org.testng.Assert.expectThrows(Assert.java:2444)
-	at org.testng.Assert.expectThrows(Assert.java:2425)
-	at org.testng.Assert.assertThrows(Assert.java:2391)
-	at tests.userServiceTests.DeleteUserTest.deleteNotFoundUserTest(DeleteUserTest.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-2025-02-09 18:07:46 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testingUserService.xml
-
-2025-02-09 18:07:46 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@d2de489 and AcceptorResource: -1
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from POST request: {"id":58,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@1981d861 and AcceptorResource: -1
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from POST request: {"id":79,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Checking if resource with ID: 58 exists at /api/tracks/58
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 58
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":58,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Checking if resource with ID: 79 exists at /api/users/79
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 79
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":79,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@34780cd9 and AcceptorResource: -1
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from POST request: {"id":80,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Checking if resource with ID: 80 exists at /api/users/80
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 80
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":80,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 80
-2025-02-09 18:07:47 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 80 in the system."}
-2025-02-09 18:07:47 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 80
-2025-02-09 18:07:47 [main] ERROR service.UserService - Failed to retrieve user with ID: 80 from endpoint: /api/users/{id}
-com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 80 is not found
-	at service.AbstractService.getResourceById(AbstractService.java:158)
-	at service.UserService.getUserById(UserService.java:26)
-	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:35)
-	at org.testng.Assert.expectThrows(Assert.java:2444)
-	at org.testng.Assert.expectThrows(Assert.java:2425)
-	at org.testng.Assert.assertThrows(Assert.java:2391)
-	at tests.userServiceTests.DeleteUserTest.deleteNotFoundUserTest(DeleteUserTest.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-2025-02-09 18:09:05 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\EPAM\Spetialization\ApiAutomationMusicService\srcMusic\MusicServiceApiAutomation\testingUserService.xml
-
-2025-02-09 18:09:05 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@49c90a9c and AcceptorResource: -1
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":59,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@762637be and AcceptorResource: -1
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":81,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Checking if resource with ID: 59 exists at /api/tracks/59
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/tracks/{id} with PropertyResourceId: null and AcceptorResource: 59
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":59,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Checking if resource with ID: 81 exists at /api/users/81
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 81
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":81,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@648d0e6d and AcceptorResource: -1
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":82,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Checking if resource with ID: 82 exists at /api/users/82
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 82
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":82,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 82
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 82 in the system."}
-2025-02-09 18:09:06 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/users/{id} with resourceId: 82
-2025-02-09 18:09:06 [main] ERROR service.UserService - Failed to retrieve user with ID: 82 from endpoint: /api/users/{id}
-com.example.exseption.ResourceException: Resource: class com.example.model.User ID: 82 is not found
-	at service.AbstractService.getResourceById(AbstractService.java:158)
-	at service.UserService.getUserById(UserService.java:26)
-	at tests.userServiceTests.DeleteUserTest.lambda$deleteNotFoundUserTest$0(DeleteUserTest.java:35)
-	at org.testng.Assert.expectThrows(Assert.java:2444)
-	at org.testng.Assert.expectThrows(Assert.java:2425)
-	at org.testng.Assert.assertThrows(Assert.java:2391)
-	at tests.userServiceTests.DeleteUserTest.deleteNotFoundUserTest(DeleteUserTest.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@56cfe111 and AcceptorResource: -1
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":83,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Checking if resource with ID: 83 exists at /api/users/83
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 83
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":83,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@2100d047 and AcceptorResource: -1
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from POST request: {"id":84,"firstName":"firstName","lastName":"lastName","email":"email"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Checking if resource with ID: 2 exists at /api/users/2
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 2
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from GET request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/users/{id} with PropertyResourceId: com.example.model.User@3c78e551 and AcceptorResource: 2
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from PUT request: {"id":2,"firstName":"newFirstName","lastName":"newLastName","email":"newEmail"}
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Checking if resource with ID: 84 exists at /api/users/84
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/users/{id} with PropertyResourceId: null and AcceptorResource: 84
-2025-02-09 18:09:06 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":84,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:53:43 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-10 10:53:44 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-10 10:53:44 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Size of playlist IDs: 18
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Size of playlist IDs: 18
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 1 from playlist Id: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 1 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Size of playlist IDs: 19
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@c889805 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":39,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:53:45 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 39
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@1095d23a and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":4,"name":"name","description":"description","isPublic":true,"userId":39,"tracks":[]}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@10244722 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@33bb3f86 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no user with ID - 0 in the system."}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@627ff1b8 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":40,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:53:45 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 40
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@5a90265a and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":5,"name":"name","description":"description","isPublic":true,"userId":40,"tracks":[]}
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 5 to endpoint: /api/playlists
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Checking if resource with ID: 5 exists at /api/playlists/5
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists/{id} to delete a playlist with ID: 5
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending DELETE request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 5
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from DELETE request: {"id":5,"name":"name","description":"description","isPublic":true,"userId":40,"tracks":[]}
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 5
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from GET request: {"statusCode":404,"statusMessage":"Not Found","errorMessage":"There is no playlist with ID - 5 in the system."}
+2025-02-10 10:53:45 [main] ERROR service.AbstractService - Resource not found at endpoint: /api/playlists/{id} with resourceId: 5
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/tracks with PropertyResourceId: com.example.model.Track@74b86971 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":33,"title":"title","artist":"artist","duration":0,"year":0,"album":"album"}
+2025-02-10 10:53:45 [main] INFO  t.p.AbstractPlaylistTest - New track with id: 33 created
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Sending POST request to endpoint: /api/playlists/{id}/tracks/add to add track with ID: 33 from playlist Id: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 33 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Size of playlist IDs: 20
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 33 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Size of playlist IDs: 20
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Fetching resource with ID: 1 from endpoint: /api/playlists/{id}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Successfully fetched resource with ID: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Sending DELETE request to endpoint: /api/playlists to delete track with ID: 33 from playlist Id: 1
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Getting number of tracks with Id: 33 to endpoint: /api/playlists from playlist with ID: 1  
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id}/tracks
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Size of playlist IDs: 19
+2025-02-10 10:53:45 [main] ERROR service.AbstractService - No resource IDs found in the response.
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@1f992a3a and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":41,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:53:45 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 41
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@6f9e08d4 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":6,"name":"name","description":"description","isPublic":true,"userId":41,"tracks":[]}
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-10 10:53:45 [main] ERROR service.AbstractService - Invalid playlistId: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/users with PropertyResourceId: com.example.model.User@f171912 and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":42,"firstName":"firstName","lastName":"lastName","email":"email"}
+2025-02-10 10:53:45 [main] INFO  t.p.AbstractPlaylistTest - Playlist creation for user: 42
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending POST request to endpoint: /api/playlists with PropertyResourceId: com.example.model.PlayList@29bcf51d and AcceptorResource: -1
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from POST request: {"id":7,"name":"name","description":"description","isPublic":true,"userId":42,"tracks":[]}
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Checking ifPresent playlist with Id: 7 to endpoint: /api/playlists
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Checking if resource with ID: 7 exists at /api/playlists/7
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Sending PUT request to endpoint: /api/playlists/{id} to update a User of playlist with ID: 7
+2025-02-10 10:53:45 [main] INFO  service.PlaylistService - Try to get playlist by Id
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending GET request to endpoint: /api/playlists/{id} with PropertyResourceId: null and AcceptorResource: 7
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from GET request: {"id":7,"name":"name","description":"description","isPublic":true,"userId":42,"tracks":[]}
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Sending PUT request to endpoint: /api/playlists/{id} with PropertyResourceId: com.example.model.PlayList@d13960e and AcceptorResource: 7
+2025-02-10 10:53:45 [main] INFO  service.AbstractService - Response received from PUT request: {"statusCode":400,"statusMessage":"Bad Request","errorMessage":"Unable to change the owner of playlist. Original ownerID - 42."}

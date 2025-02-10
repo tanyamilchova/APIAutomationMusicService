@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="tests.playlistServiceTests">
+    <test name="Run playlistServiceTests">
+        <classes>
+            <class name="tests.playlistServiceTests.AddTracksToPlaylistTest">
+                <methods>
+                    <include name="addTracksToPlaylistTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.playlistServiceTests.CreateAPlayListTest">
+                <methods>
+                    <include name="createPlaylistTest"/>
+                </methods>
+                <methods>
+                    <include name="createPlaylistWithNotExistingUserTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.playlistServiceTests.DeletePlaylistTest">
+                <methods>
+                    <include name="deletePlaylistDetailsTest"/>
+                </methods>
+                <methods>
+                    <include name="deleteNotFoundPLAYLISTTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.playlistServiceTests.DeleteTrackFromPlaylist">
+                <methods>
+                    <include name="deleteTracksFromPlaylistTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.playlistServiceTests.GetPlaylistById">
+                <methods>
+                    <include name="getPlaylistByIdTest"/>
+                </methods>
+                <methods>
+                    <include name="getIllegalIdPlaylistTest"/>
+                </methods>
+            </class>
+
+            <class name="tests.playlistServiceTests.UpdatePlaylistAttributesTest">
+                <methods>
+                    <include name="updatePlaylistAttributesTest"/>
+                </methods>
+                <methods>
+                    <include name="updatePlaylistUserIdTest"/>
+                </methods>
+            </class>
+
+
+<!--            <class name="tests.userServiceTests.CreateUserTest">-->
+<!--                <methods>-->
+<!--                    <include name="createUserTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="tests.userServiceTests.DeleteUserTest">-->
+<!--                <methods>-->
+<!--                    <include name="deleteUserDetailsTest"/>-->
+<!--                </methods>-->
+<!--                <methods>-->
+<!--                    <include name="deleteNotFoundUserTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+
+</suite>

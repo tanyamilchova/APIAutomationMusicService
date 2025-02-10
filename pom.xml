@@ -79,6 +79,10 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/scratch.xml</suiteXmlFile> <!-- Adjust path accordingly -->
                     </suiteXmlFiles>
+<!--                    <suiteXmlFiles>-->
+<!--                        <suiteXmlFile>src/test/resources/testngPlaylistService.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>src/test/resources/testingUserService.xml</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
                 </configuration>
             </plugin>
         </plugins>
