@@ -52,8 +52,5 @@ mvn clean test -DsuiteXmlFile=userServiceTests.xml
 mvn clean test -DsuiteXmlFile=playlistServiceTests.xml
 ```
 
-## Notes
-- Some user-related tests are commented out in the `playlistServiceTests.xml`.
-- Authorization tokens are required for making API calls.
-- Negative test cases are included for better coverage.
+
 
