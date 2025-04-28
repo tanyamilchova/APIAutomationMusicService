@@ -51,20 +51,6 @@
                 </methods>
             </class>
 
-
-<!--            <class name="tests.userServiceTests.CreateUserTest">-->
-<!--                <methods>-->
-<!--                    <include name="createUserTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="tests.userServiceTests.DeleteUserTest">-->
-<!--                <methods>-->
-<!--                    <include name="deleteUserDetailsTest"/>-->
-<!--                </methods>-->
-<!--                <methods>-->
-<!--                    <include name="deleteNotFoundUserTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
         </classes>
     </test>
 
